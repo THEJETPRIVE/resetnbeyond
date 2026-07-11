@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * RESET & BEYOND — Global foundation
+ * ==================================================================
+ * Two palettes, one system. "Day" is the default warm-ivory light
+ * theme; [data-theme="dark"] is the charcoal nocturne. Colours are
+ * stored as raw HSL channels so Tailwind's <alpha-value> works.
+ */
+
+@layer base {
+  :root {
+    /* — Paper (warm neutrals) — */
+    --ivory: 40 33% 96%;      /* #F7F4EE warm ivory */
+    --stone: 40 20% 92%;      /* stone white */
+    --sand: 36 26% 86%;       /* warm sand */
+
+    /* — Ink (charcoal) — */
+    --charcoal: 30 6% 14%;    /* #26241F soft charcoal */
+    --ink: 30 8% 9%;          /* deepest ink */
+
+    /* — Botanical accent — */
+    --sage: 110 12% 52%;      /* muted sage */
+    --sage-deep: 120 14% 30%; /* deep sage for hover */
+
+    /* — Metallic (hairlines only) — */
+    --gold: 38 44% 58%;       /* restrained antique gold */
+
+    /* — Semantic, theme-aware — */
+    --background: var(--ivory);
+    --surface: var(--stone);
+    --foreground: var(--charcoal);
+    --muted: 32 7% 40%;       /* secondary text */
+    --line: 34 14% 82%;       /* hairline rules */
+    --accent: var(--sage-deep);
+
+    --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    --background: 30 8% 8%;    /* deep charcoal paper */
+    --surface: 30 7% 12%;
+    --foreground: 40 20% 90%;  /* warm off-white ink */
+    --muted: 38 10% 62%;
+    --line: 34 8% 24%;
+    --sage: 110 14% 58%;
+    --accent: 110 16% 62%;
+    --gold: 38 46% 62%;
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: hsl(var(--line));
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis owns scrolling; never double-smooth */
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+    transition: background-color 0.6s var(--ease-luxe), color 0.6s var(--ease-luxe);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), "Cormorant Garamond", serif;
+    font-weight: 300;
+    color: hsl(var(--foreground));
+  }
+
+  ::selection {
+    background: hsl(var(--sage) / 0.25);
+    color: hsl(var(--foreground));
+  }
+
+  /* A whisper-thin, palette-matched scrollbar */
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--line));
+    border-radius: 9px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted)); }
+
+  /* Focus ring — visible, elegant, never harsh */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Eyebrow / overline label — the quiet signal of a considered brand */
+  .overline {
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--muted));
+  }
+
+  /* Hairline gold rule used as a section marker */
+  .rule-gold {
+    height: 1px;
+    width: 3rem;
+    background: hsl(var(--gold) / 0.7);
+  }
+
+  /* Editorial body measure */
+  .prose-luxe {
+    max-width: 62ch;
+    font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+    line-height: 1.75;
+    color: hsl(var(--muted));
+  }
+  .prose-luxe strong { color: hsl(var(--foreground)); font-weight: 500; }
+
+  /* Subtle top gradient scrim for legibility over imagery */
+  .scrim-top {
+    background: linear-gradient(180deg, hsl(0 0% 0% / 0.45) 0%, transparent 45%);
+  }
+  .scrim-bottom {
+    background: linear-gradient(0deg, hsl(0 0% 0% / 0.55) 0%, transparent 55%);
+  }
+}
+
+@layer utilities {
+  /* Clip text to a fill — used for the gilded ampersand */
+  .text-gilded {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(38 60% 72%) 50%, hsl(var(--gold)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Fine-grain film texture for depth on flat colour fields */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .drag-none {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}
+
+/* Lenis smooth-scroll baseline (owns momentum globally) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Honour reduced-motion: strip momentum, parallax and looping motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
