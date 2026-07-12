@@ -4,6 +4,7 @@ import { Wordmark } from "@/components/layout/Wordmark";
 import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
+import { VisitorCount } from "@/components/layout/VisitorCount";
 
 /**
  * Footer - the long exhale. A final, unhurried invitation followed by a
@@ -76,6 +77,7 @@ export function Footer() {
       <div className="container flex flex-col gap-4 border-t border-ivory/10 py-8 text-xs text-ivory/40 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} {site.name}. A private wellness advisory.</p>
         <p className="tracking-wide2">{site.offices.join("  ·  ")}</p>
+        <VisitorCount />
         <div className="flex gap-6">
           <Link href="/contact" className="transition-colors hover:text-ivory">Contact</Link>
           <span className="transition-colors hover:text-ivory">Privacy</span>

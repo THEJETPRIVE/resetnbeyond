@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ArticleCard } from "@/components/cards/ArticleCard";
 import { CTASection } from "@/components/shared/CTASection";
+import { JsonLd, SITE_URL } from "@/components/seo/JsonLd";
 
 export function generateStaticParams() {
   return articleSlugs.map((slug) => ({ slug }));
@@ -30,8 +31,21 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   const more = articles.filter((a) => a.slug !== article.slug).slice(0, 2);
 
+  /** Article schema - authorship and publisher for search + AI citation */
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.standfirst,
+    author: { "@type": "Organization", name: "Reset & Beyond" },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
+    articleSection: article.category,
+  };
+
   return (
     <>
+      <JsonLd data={articleSchema} />
       <ArticleHero
         category={article.category}
         readTime={article.readTime}

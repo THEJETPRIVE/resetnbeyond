@@ -12,6 +12,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Gallery } from "@/components/resort/Gallery";
 import { ResortCard } from "@/components/cards/ResortCard";
 import { CTASection } from "@/components/shared/CTASection";
+import { JsonLd, SITE_URL } from "@/components/seo/JsonLd";
 
 /** Pre-render every house at build time */
 export function generateStaticParams() {
@@ -22,8 +23,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const resort = getResort(params.slug);
   if (!resort) return {};
   return {
-    title: `${resort.name} - ${resort.country}`,
-    description: resort.tagline,
+    title: `${resort.name} - Luxury Wellness Resort in ${resort.country}`,
+    description: `${resort.tagline} ${resort.cardline} Programs, cuisine, pricing guidance and private reservations via Reset & Beyond.`,
   };
 }
 
@@ -47,8 +48,55 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
     .filter((r): r is NonNullable<typeof r> => Boolean(r))
     .slice(0, 3);
 
+  const pageUrl = `${SITE_URL}/resorts/${resort.slug}`;
+
+  /** Resort schema - a real place with real coordinates */
+  const resortSchema = {
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    name: resort.name,
+    description: `${resort.tagline} ${resort.cardline}`,
+    url: pageUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: resort.region,
+      addressCountry: resort.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: resort.coordinates[0],
+      longitude: resort.coordinates[1],
+    },
+    ...(resort.established ? { foundingDate: resort.established } : {}),
+  };
+
+  /** FAQPage - mirrors the visible "Before you go" accordion */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: resort.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  /** BreadcrumbList - mirrors the visible hero breadcrumb */
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "The Collection", item: `${SITE_URL}/resorts` },
+      { "@type": "ListItem", position: 3, name: resort.name, item: pageUrl },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={resortSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow={`${resort.country} · ${resort.region.split(",")[0]}`}
         titleLines={[resort.name]}

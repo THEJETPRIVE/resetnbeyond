@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { resortSlugs } from "@/data/resorts";
 import { programSlugs } from "@/data/programs";
 import { articleSlugs } from "@/data/journal";
+import { SITE_URL } from "@/components/seo/JsonLd";
 
-const base = "https://resetandbeyond.com";
+const base = SITE_URL;
 
 /** Static + data-driven routes for search engines. */
 export default function sitemap(): MetadataRoute.Sitemap {

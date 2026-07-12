@@ -6,8 +6,15 @@ import { Accordion, type QA } from "@/components/ui/Accordion";
 /**
  * HomeFaq - the questions a serious guest actually has, answered plainly.
  * Heading held to the left, the accordion given room on the right.
+ *
+ * Exported so the page can mirror these into FAQPage structured data -
+ * schema and visible content must always say the same thing.
  */
-const faqs: QA[] = [
+export const homeFaqs: QA[] = [
+  {
+    q: "Which are the best luxury wellness resorts in the world?",
+    a: "Our curated collection names nine: Chenot Palace Weggis and Clinique La Prairie in Switzerland, SHA Wellness Clinic in Spain and Mexico, Lanserhof Lans in Austria, JOALI BEING in the Maldives, Six Senses Vana and Ananda in the Himalayas in India, and Chiva-Som in Thailand. Each is chosen because it does one discipline - longevity, detox, sleep or medical wellness - better than anywhere else on earth.",
+  },
   {
     q: "Is Reset & Beyond a booking website?",
     a: "No. We are a private advisory. We do not own the houses we recommend, and we are not a reservation engine. We understand these clinics intimately and match a person to the right programme - then arrange every detail on their behalf.",
@@ -46,7 +53,7 @@ export function HomeFaq() {
           </Reveal>
         </div>
         <Reveal delay={0.1}>
-          <Accordion items={faqs} />
+          <Accordion items={homeFaqs} />
         </Reveal>
       </div>
     </Section>
