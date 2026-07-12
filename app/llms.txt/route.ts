@@ -19,6 +19,7 @@ export function GET() {
 
 Site: ${SITE_URL}
 Contact: concierge@resetandbeyond.com
+Full content for ingestion: ${SITE_URL}/llms-full.txt
 
 ## The Collection - the best luxury wellness resorts in the world
 

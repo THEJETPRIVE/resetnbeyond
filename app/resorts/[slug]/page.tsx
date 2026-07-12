@@ -70,11 +70,22 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
     ...(resort.established ? { foundingDate: resort.established } : {}),
   };
 
+  /** Visible FAQ set - the house's own questions plus a concrete pricing
+      answer derived from its guidance (generative engines are asked
+      "how much does X cost" constantly; we answer it plainly) */
+  const faqItems = [
+    ...resort.faq,
+    {
+      q: `How much does a stay at ${resort.name} cost?`,
+      a: resort.pricingGuidance,
+    },
+  ];
+
   /** FAQPage - mirrors the visible "Before you go" accordion */
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: resort.faq.map((f) => ({
+    mainEntity: faqItems.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -314,7 +325,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
             <TextReveal as="h2" lines={["Before", "you go."]} className="mt-6 text-display-sm font-normal" />
           </div>
           <Reveal delay={0.1}>
-            <Accordion items={resort.faq} />
+            <Accordion items={faqItems} />
           </Reveal>
         </div>
       </Section>

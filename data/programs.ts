@@ -18,6 +18,9 @@ export interface Program {
   signals: string[];
   /** What a considered programme tends to include */
   approach: { title: string; body: string }[];
+  /** Conversational questions, answered plainly - rendered on-page and
+      mirrored into FAQPage schema for search and generative engines */
+  faq: { q: string; a: string }[];
   image: { tone: string; alt: string; aiPrompt: string; keywords: string; src?: string };
 }
 
@@ -42,6 +45,20 @@ export const programs: Program[] = [
       { title: "Intervene precisely", body: "Cellular, nutritional and regenerative protocols calibrated to your biology, not a template." },
       { title: "Sustain at home", body: "A forward protocol and cadence of review so gains compound long after departure." },
     ],
+    faq: [
+      {
+        q: "What is the best longevity clinic in the world?",
+        a: "Clinique La Prairie, above Lake Geneva, is widely regarded as the original and most complete longevity clinic - ninety years of cellular science under one roof. Chenot Palace Weggis and SHA Wellness Clinic (Spain and Mexico) are its closest peers. We match you to the house that fits your biology, your goals and your calendar.",
+      },
+      {
+        q: "How long should a longevity programme be?",
+        a: "Seven nights is the meaningful minimum - enough for full diagnostics, intervention and a forward protocol. The most committed guests return annually, treating the programme as a standing appointment with their future self.",
+      },
+      {
+        q: "What does a luxury longevity retreat cost?",
+        a: "Expect from approximately CHF 30,000 per person for seven nights at Clinique La Prairie, from CHF 8,500 at Chenot Palace Weggis, and from €6,500 at SHA Spain - each all-inclusive of medical assessment, accommodation and cuisine.",
+      },
+    ],
     image: { tone: "prog-longevity", alt: "Still alpine lake at first light", aiPrompt: "Serene alpine lake at first light, mirror-still, soft mist, sense of time and permanence, muted palette, editorial", keywords: "alpine lake dawn still mist calm" },
   },
   {
@@ -63,6 +80,20 @@ export const programs: Program[] = [
       { title: "Assess and prepare", body: "Diagnostics and a gentle ramp so the body detoxifies safely and without crisis." },
       { title: "Guide elimination", body: "Hydro-, phyto- and nutritional therapies that support the organs of elimination." },
       { title: "Rebuild", body: "A structured return to nourishment that consolidates the reset rather than undoing it." },
+    ],
+    faq: [
+      {
+        q: "What is the best luxury detox retreat in the world?",
+        a: "Chenot Palace Weggis on Lake Lucerne defines the modern medical detox; Lanserhof Lans in the Tyrol is the benchmark for gut-first Mayr medicine. For a warmer setting, SHA Wellness Clinic and Chiva-Som in Thailand deliver rigorous cleanses with more sun. The right answer depends on how demanding a programme you want.",
+      },
+      {
+        q: "Is a medical detox safe?",
+        a: "At the houses we curate, yes - every programme is physician-designed and supervised daily, beginning with diagnostics and calibrated to your capacity. This is precisely what separates a clinic from a juice retreat.",
+      },
+      {
+        q: "How many days do you need for a proper detox?",
+        a: "Seven nights is the honest minimum for a metabolic reset; ten to fourteen consolidates it. Shorter stays refresh, but they do not transform.",
+      },
     ],
     image: { tone: "prog-detox", alt: "Water surface in soft light", aiPrompt: "Abstract clear water surface in soft light, gentle ripples, purity and clarity, muted cool palette, editorial minimal", keywords: "clear water ripple light purity minimal" },
   },
@@ -86,6 +117,20 @@ export const programs: Program[] = [
       { title: "Restore the system", body: "Nervous-system regulation, sleep restoration and targeted physical recovery." },
       { title: "Re-enter deliberately", body: "Habits and protocols engineered to survive contact with your calendar." },
     ],
+    faq: [
+      {
+        q: "What is the best retreat for burnout and executive fatigue?",
+        a: "Lanserhof Lans's Executive Reset and Chenot Palace Weggis's Recover & Energise are engineered specifically for depleted leaders - measurable, medical and discreet. Chiva-Som's Optimal Performance suits those who want the same rigour wrapped in Thai warmth.",
+      },
+      {
+        q: "How quickly can an executive reset show results?",
+        a: "Most guests report restored sleep and clarity within a seven-night programme, with objective markers - stress physiology, recovery capacity - improving alongside. The protocols are designed to survive contact with your calendar afterwards.",
+      },
+      {
+        q: "Can a reset be kept completely private?",
+        a: "Yes. Discretion is the baseline at every house we work with, and your enquiry is handled with the confidentiality of a family office. Several houses can arrange entirely private arrival, dining and treatment schedules.",
+      },
+    ],
     image: { tone: "prog-exec", alt: "Quiet mountain path at dawn", aiPrompt: "A single quiet mountain path at dawn, solitary and still, soft light, sense of clarity and pause, muted palette, editorial", keywords: "mountain path dawn solitude clarity calm" },
   },
   {
@@ -107,6 +152,16 @@ export const programs: Program[] = [
       { title: "Understand the terrain", body: "Hormonal, metabolic and bone-health diagnostics specific to the female body." },
       { title: "Balance and support", body: "Nutritional, medical and mind-body protocols attuned to your chapter of life." },
       { title: "Plan the long arc", body: "A programme that anticipates the transitions ahead, not merely the present." },
+    ],
+    faq: [
+      {
+        q: "What is the best wellness retreat for women's health and hormonal balance?",
+        a: "SHA Wellness Clinic and Clinique La Prairie both run dedicated women's health programmes with genuine hormonal and metabolic expertise; JOALI BEING in the Maldives offers a gentler, nature-led approach to the same questions. We advise based on your chapter of life and what you want measured.",
+      },
+      {
+        q: "Are there luxury retreats for menopause and perimenopause?",
+        a: "Yes - this is one of the fastest-maturing disciplines in medical wellness. The leading clinics now treat perimenopause proactively, with hormonal diagnostics, nutrition and bone-health protocols designed for the female body rather than adapted from a male default.",
+      },
     ],
     image: { tone: "prog-womens", alt: "Soft light through linen", aiPrompt: "Soft natural light through linen curtain, warm serene interior, sense of calm and care, muted warm palette, editorial", keywords: "soft light linen warm calm serene interior" },
   },
@@ -130,6 +185,16 @@ export const programs: Program[] = [
       { title: "Rebuild the night", body: "Chronobiology, light, temperature and mind-body therapies to restore deep and REM sleep." },
       { title: "Protect the gain", body: "An environment and routine designed to hold, translated for home and travel." },
     ],
+    faq: [
+      {
+        q: "What is the best sleep retreat in the world?",
+        a: "Six Senses Vana's Sleep & Circadian Restoration in the Himalayan foothills and Chiva-Som's Sleep Enhancement programme in Thailand lead the field; Ananda's Sleep Recovery adds classical Ayurveda and Yoga Nidra. Where geography itself is part of the medicine, we weigh the setting as carefully as the protocol.",
+      },
+      {
+        q: "Can a retreat genuinely fix broken sleep?",
+        a: "When sleep is assessed objectively and rebuilt through chronobiology, environment and practice - rather than treated with a pillow menu - the gains are real and measurable. The best programmes also hand you a routine designed to hold at home and through travel.",
+      },
+    ],
     image: { tone: "prog-sleep", alt: "Moonlit calm water at night", aiPrompt: "Calm dark water under moonlight, deep blue and silver, profound stillness and rest, editorial minimal nightscape", keywords: "moonlight water night calm stillness rest" },
   },
   {
@@ -151,6 +216,16 @@ export const programs: Program[] = [
       { title: "Quantify", body: "Comprehensive biomarker and performance testing to establish what to optimise." },
       { title: "Augment", body: "Cryo, hyperbaric, photobiomodulation and IV protocols, selected for your goals." },
       { title: "Iterate", body: "A measurable feedback loop that continues, with guidance, beyond your stay." },
+    ],
+    faq: [
+      {
+        q: "What is the best biohacking retreat or clinic?",
+        a: "SHA Wellness Clinic Mexico brings the full toolkit - cryotherapy, hyperbaric oxygen, IV protocols - under physician direction; Chenot Palace Weggis pairs comparable technology with the deepest diagnostics in the Alps. The difference from a gadget spa is that here the data leads and the tools follow.",
+      },
+      {
+        q: "Is biohacking at these clinics evidence-based?",
+        a: "The houses we curate deploy these modalities under medical supervision, calibrated against your own biomarkers - a feedback loop, not a menu of experiences. Anything that cannot be measured is treated as theatre.",
+      },
     ],
     image: { tone: "prog-biohack", alt: "Cool geometric light study", aiPrompt: "Abstract cool geometric light study, clean lines, precision and technology rendered calm, muted palette, editorial minimal", keywords: "abstract light geometry precision cool minimal" },
   },
@@ -174,6 +249,16 @@ export const programs: Program[] = [
       { title: "Learn by doing", body: "Therapeutic cuisine, cooking sessions and re-education in how and what to eat." },
       { title: "Carry it home", body: "Principles and habits designed to outlast the stay and travel with you." },
     ],
+    faq: [
+      {
+        q: "What is the best retreat for weight loss and metabolic health?",
+        a: "SHA Wellness Clinic's Healthy Weight programme is the most complete - macrobiotic nutrition under genuine medical supervision - while Lanserhof's Mayr cure resets metabolism from the gut outward. Both aim at sustainable change rather than a number on departure day.",
+      },
+      {
+        q: "Will I actually enjoy the food at a nutrition retreat?",
+        a: "At these houses, yes - SHA made macrobiotic cuisine genuinely desirable, and Chiva-Som's kitchen proves healthy eating need never be dull. Discipline and pleasure at the table are not in conflict when the chef is as serious as the physician.",
+      },
+    ],
     image: { tone: "prog-nutrition", alt: "Seasonal produce, still life", aiPrompt: "Elegant still life of seasonal produce and herbs on linen, natural light, kinfolk styling, muted warm palette, editorial", keywords: "seasonal produce still life linen natural light" },
   },
   {
@@ -196,6 +281,16 @@ export const programs: Program[] = [
       { title: "Interpret expertly", body: "Physician-led interpretation that turns data into a clear, prioritised plan." },
       { title: "Act early", body: "Interventions and monitoring that address risk while it remains elective." },
     ],
+    faq: [
+      {
+        q: "Where can I get a comprehensive executive health check in luxury surroundings?",
+        a: "Clinique La Prairie, Chenot Palace Weggis and Lanserhof Lans all pair hospital-grade diagnostics - bloodwork, imaging, cardiovascular and metabolic screening - with the comfort of a grand hotel. One considered week replaces a year of fragmented appointments.",
+      },
+      {
+        q: "How often should preventive screening be repeated?",
+        a: "Annually, for most of our clients - the value compounds when results are tracked year over year by the same clinical team. We hold that thread between visits so nothing is lost.",
+      },
+    ],
     image: { tone: "prog-preventive", alt: "Calm horizon at dawn", aiPrompt: "Wide calm horizon at dawn, sea meeting sky, sense of foresight and clarity, muted palette, editorial minimal", keywords: "horizon dawn sea sky calm foresight minimal" },
   },
   {
@@ -217,6 +312,16 @@ export const programs: Program[] = [
       { title: "Clinical foundation", body: "On-site physicians, diagnostics and evidence-led protocols underpin the entire stay." },
       { title: "Hospitality equal to it", body: "The comfort, cuisine and discretion of a grand hotel, without compromise." },
       { title: "Continuity of care", body: "Findings and protocols that connect to your physicians and your life at home." },
+    ],
+    faq: [
+      {
+        q: "What is the best medical wellness clinic in the world?",
+        a: "Clinique La Prairie in Montreux, Lanserhof Lans in Austria, Chenot Palace Weggis on Lake Lucerne and SHA Wellness Clinic in Spain and Mexico form the recognised first rank - real physicians and diagnostics, delivered with grand-hotel hospitality. Which is best depends entirely on what you need treated, measured or prevented.",
+      },
+      {
+        q: "What makes a medical wellness clinic different from a spa?",
+        a: "Physicians, diagnostics and evidence-led protocols underpin the entire stay - the spa is in service of the medicine, not the other way around. If nothing is measured on arrival and departure, it is a spa.",
+      },
     ],
     image: { tone: "prog-medical", alt: "Refined clinical interior in warm light", aiPrompt: "Refined modern clinical interior bathed in warm light, minimal and precise yet inviting, muted palette, editorial", keywords: "modern clinical interior warm minimal refined" },
   },

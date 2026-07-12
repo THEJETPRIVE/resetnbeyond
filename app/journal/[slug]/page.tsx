@@ -41,6 +41,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     publisher: { "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
     articleSection: article.category,
+    datePublished: article.isoDate,
+    dateModified: article.isoDate,
   };
 
   return (

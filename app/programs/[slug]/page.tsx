@@ -7,6 +7,8 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
 import { ResortCard } from "@/components/cards/ResortCard";
 import { CTASection } from "@/components/shared/CTASection";
+import { Accordion } from "@/components/ui/Accordion";
+import { JsonLd, SITE_URL } from "@/components/seo/JsonLd";
 
 export function generateStaticParams() {
   return programSlugs.map((slug) => ({ slug }));
@@ -15,22 +17,50 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const program = getProgram(params.slug);
   if (!program) return {};
-  return { title: program.name, description: program.tagline };
+  return {
+    title: `${program.name} Retreats - The Finest, Curated`,
+    description: `${program.tagline} The world's best luxury ${program.name.toLowerCase()} retreats and clinics, compared and privately reserved by Reset & Beyond.`,
+  };
 }
 
 /**
  * PROGRAM DETAIL - a discipline explained, then matched to houses.
  * Intro → the signals that bring a guest here → how a considered
- * programme unfolds → the houses that master it → the invitation.
+ * programme unfolds → the houses that master it → common questions →
+ * the invitation.
  */
 export default function ProgramDetailPage({ params }: { params: { slug: string } }) {
   const program = getProgram(params.slug);
   if (!program) notFound();
 
   const houses = resortsForProgram(program.slug);
+  const pageUrl = `${SITE_URL}/programs/${program.slug}`;
+
+  /** FAQPage - mirrors the visible questions word for word */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: program.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Programs", item: `${SITE_URL}/programs` },
+      { "@type": "ListItem", position: 3, name: program.name, item: pageUrl },
+    ],
+  };
 
   return (
     <>
+      <JsonLd data={faqSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <SplitHero
         eyebrow={program.eyebrow}
         title={program.name}
@@ -110,6 +140,21 @@ export default function ProgramDetailPage({ params }: { params: { slug: string }
           </div>
         </Section>
       )}
+
+      {/* Common questions - visible twin of the FAQPage schema above */}
+      <Section>
+        <div className="container grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="lg:sticky lg:top-32 lg:h-fit">
+            <Reveal>
+              <Eyebrow>Common Questions</Eyebrow>
+            </Reveal>
+            <TextReveal as="h2" lines={["Asked often,", "answered plainly."]} className="mt-6 text-display-sm font-normal" />
+          </div>
+          <Reveal delay={0.1}>
+            <Accordion items={program.faq} />
+          </Reveal>
+        </div>
+      </Section>
 
       <CTASection
         lines={["Let us design", `your ${program.name.toLowerCase()} reset.`]}

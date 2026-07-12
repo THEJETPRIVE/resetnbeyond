@@ -12,6 +12,8 @@ export interface Article {
   category: string;
   readTime: string;
   date: string;
+  /** ISO publication date for Article schema (freshness signal) */
+  isoDate: string;
   author: string;
   image: { tone: string; alt: string; aiPrompt: string; keywords: string; src?: string };
   body: string[];
@@ -26,6 +28,7 @@ export const articles: Article[] = [
     category: "Longevity",
     readTime: "8 min",
     date: "June 2026",
+    isoDate: "2026-06-05",
     author: "The Editors",
     image: { tone: "j-longevity", alt: "Still lake and mountains at dawn", aiPrompt: "Timeless still alpine lake at dawn, mountains reflected, sense of permanence and time, muted editorial palette", keywords: "alpine lake dawn reflection time calm" },
     body: [
@@ -42,6 +45,7 @@ export const articles: Article[] = [
     category: "Medical Wellness",
     readTime: "6 min",
     date: "May 2026",
+    isoDate: "2026-05-10",
     author: "The Editors",
     image: { tone: "j-gut", alt: "Crisp alpine morning", aiPrompt: "Crisp alpine morning, clean air and light, sense of renewal and rigour, muted editorial palette, minimal", keywords: "alpine morning crisp light renewal minimal" },
     body: [
@@ -58,6 +62,7 @@ export const articles: Article[] = [
     category: "Sleep",
     readTime: "7 min",
     date: "April 2026",
+    isoDate: "2026-04-14",
     author: "The Editors",
     image: { tone: "j-rest", alt: "Misty forest at dawn", aiPrompt: "Misty Sal forest at dawn, soft light through trees, deep quiet and rest, muted green editorial palette", keywords: "forest mist dawn quiet rest green calm" },
     body: [
@@ -74,6 +79,7 @@ export const articles: Article[] = [
     category: "The House",
     readTime: "5 min",
     date: "March 2026",
+    isoDate: "2026-03-09",
     author: "The Editors",
     image: { tone: "j-discretion", alt: "Soft light on stone architecture", aiPrompt: "Soft light on minimal stone architecture, empty and serene, sense of privacy and calm, muted editorial palette", keywords: "minimal architecture stone light privacy serene" },
     body: [
