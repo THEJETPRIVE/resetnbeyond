@@ -36,11 +36,11 @@ export function PageHero({
     >
       <div className="absolute inset-0">
         <EditorialImage tone={tone} src={src} alt={alt} className="h-full w-full" kenBurns priority sizes="100vw" />
-        <div className="absolute inset-0 bg-charcoal/45" aria-hidden />
+        <div className="absolute inset-0 bg-charcoal/30" aria-hidden />
         <div
           className="absolute inset-0"
           aria-hidden
-          style={{ background: "linear-gradient(180deg, hsl(30 8% 9% / 0.5) 0%, transparent 32%, transparent 55%, hsl(30 8% 9% / 0.7) 100%)" }}
+          style={{ background: "linear-gradient(180deg, hsl(30 8% 9% / 0.5) 0%, transparent 30%, transparent 52%, hsl(30 8% 9% / 0.72) 100%)" }}
         />
       </div>
 

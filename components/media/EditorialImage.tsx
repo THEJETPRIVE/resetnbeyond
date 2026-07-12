@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { imageForTone } from "@/lib/images";
 
 /**
  * EditorialImage — the site's single image primitive.
@@ -59,6 +60,10 @@ export function EditorialImage({
   const [loaded, setLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  // Prefer an explicit src; otherwise resolve provisional photography from
+  // the tone seed. Either way, the toned duotone remains as the fallback.
+  const resolvedSrc = src ?? imageForTone(tone);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -93,14 +98,17 @@ export function EditorialImage({
         className="absolute inset-0"
         style={doParallax ? { y, scale: 1.16 } : kenBurns && !reduce ? { scale: 1 } : undefined}
       >
-        {src && (
+        {resolvedSrc && (
           <Image
-            src={src}
+            src={resolvedSrc}
             alt={alt}
             fill
             sizes={sizes}
             priority={priority}
             onLoad={() => setLoaded(true)}
+            // A whisper of desaturation keeps live photography inside the
+            // muted ivory/sage palette rather than fighting it.
+            style={{ filter: "saturate(0.86) contrast(1.02)" }}
             className={cn(
               "object-cover transition-opacity duration-1000 ease-luxe drag-none",
               loaded ? "opacity-100" : "opacity-0",
