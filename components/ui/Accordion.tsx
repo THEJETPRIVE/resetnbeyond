@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Accordion — the FAQ, kept quiet. A hairline-ruled list that opens with
+ * Accordion - the FAQ, kept quiet. A hairline-ruled list that opens with
  * a soft height ease and a rotating plus. Accessible: real buttons,
  * aria-expanded, region association.
  */
@@ -30,7 +30,7 @@ export function Accordion({ items, className }: { items: QA[]; className?: strin
               aria-controls={`faq-panel-${i}`}
               className="group flex w-full items-center justify-between gap-6 py-7 text-left"
             >
-              <span className="font-serif text-xl font-light text-foreground md:text-2xl">{item.q}</span>
+              <span className="font-serif text-xl font-normal text-foreground md:text-2xl">{item.q}</span>
               <Plus
                 className={cn(
                   "h-5 w-5 shrink-0 text-muted transition-transform duration-500 ease-luxe",

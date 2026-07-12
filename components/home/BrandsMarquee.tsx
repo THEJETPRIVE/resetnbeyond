@@ -4,8 +4,8 @@ import { Marquee } from "@/components/ui/Marquee";
 import { resorts } from "@/data/resorts";
 
 /**
- * BrandsMarquee — provenance, drifting slowly. The register of houses we
- * curate, set as a wordmark procession. No logos, no clutter — names in
+ * BrandsMarquee - provenance, drifting slowly. The register of houses we
+ * curate, set as a wordmark procession. No logos, no clutter - names in
  * the display serif carry more authority than any badge.
  */
 export function BrandsMarquee() {

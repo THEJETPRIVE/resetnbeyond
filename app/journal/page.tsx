@@ -9,11 +9,11 @@ import { articles } from "@/data/journal";
 export const metadata: Metadata = {
   title: "The Journal",
   description:
-    "Considered essays on longevity, medical wellness, sleep and the art of the reset — in the register of Monocle and Kinfolk, never a sales pitch.",
+    "Considered essays on longevity, medical wellness, sleep and the art of the reset - in the register of Monocle and Kinfolk, never a sales pitch.",
 };
 
 /**
- * JOURNAL INDEX — the editorial voice. A lead essay, then the archive in
+ * JOURNAL INDEX - the editorial voice. A lead essay, then the archive in
  * a calm three-column rhythm.
  */
 export default function JournalPage() {
@@ -24,7 +24,7 @@ export default function JournalPage() {
       <PageHero
         eyebrow="The Journal"
         titleLines={["On the art", "of the reset."]}
-        standfirst="Long-form thinking on longevity, sleep, medical wellness and discretion — written for the long view, and never to sell."
+        standfirst="Long-form thinking on longevity, sleep, medical wellness and discretion - written for the long view, and never to sell."
         tone="journal-hero"
         alt="An open journal in soft morning light"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Journal", href: "/journal" }]}

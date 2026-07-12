@@ -3,11 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Button / CTA — the site's call to action.
+ * Button / CTA - the site's call to action.
  *
  * Two registers only: `solid` (charcoal pill, for the primary act of
  * enquiry) and `line` (a quiet underlined link with a rising arrow, for
- * everything else). No third option — restraint is the brand.
+ * everything else). No third option - restraint is the brand.
  */
 type Variant = "solid" | "line" | "outline";
 

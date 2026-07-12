@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { articles } from "@/data/journal";
 
 /**
- * JournalPreview — the editorial voice. A lead essay beside a stack of
+ * JournalPreview - the editorial voice. A lead essay beside a stack of
  * three, positioning Reset & Beyond as an authority rather than a
  * salesperson. This is the section that earns the trust the enquiry needs.
  */

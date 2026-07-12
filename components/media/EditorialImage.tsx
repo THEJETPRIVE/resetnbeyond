@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { imageForTone } from "@/lib/images";
 
 /**
- * EditorialImage — the site's single image primitive.
+ * EditorialImage - the site's single image primitive.
  *
  * It ALWAYS paints a warm, deterministic duotone beneath the photograph,
  * so a section never shows an empty frame while assets are in production
@@ -68,7 +68,7 @@ export function EditorialImage({
     target: ref,
     offset: ["start end", "end start"],
   });
-  // A restrained ±8% drift — presence, not spectacle.
+  // A restrained ±8% drift - presence, not spectacle.
   const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   const scrimClass =
@@ -91,7 +91,7 @@ export function EditorialImage({
         className,
       )}
     >
-      {/* Toned base — always present, the art-directed fallback */}
+      {/* Toned base - always present, the art-directed fallback */}
       <div className="absolute inset-0" style={{ backgroundImage: toneToGradient(tone) }} aria-hidden />
 
       <motion.div

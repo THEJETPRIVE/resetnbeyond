@@ -9,14 +9,14 @@ import { CTASection } from "@/components/shared/CTASection";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Reset & Beyond is an invitation-only wellness advisory for the world's most discerning few — independent, discreet, and intimately acquainted with the finest houses on earth.",
+    "Reset & Beyond is an invitation-only wellness advisory for the world's most discerning few - independent, discreet, and intimately acquainted with the finest houses on earth.",
 };
 
 const standards = [
   { k: "Independence", body: "We own nothing we recommend. Our counsel is unbought and, when it needs to be, unflattering." },
-  { k: "Intimacy", body: "We know these houses in person — their physicians, their strengths, their limits. Nothing here is second-hand." },
+  { k: "Intimacy", body: "We know these houses in person - their physicians, their strengths, their limits. Nothing here is second-hand." },
   { k: "Discretion", body: "Every enquiry is held with the confidentiality of a family office. Privacy is the service, not a clause." },
-  { k: "Continuity", body: "One advisor, one thread — from the first question to the reset after the reset." },
+  { k: "Continuity", body: "One advisor, one thread - from the first question to the reset after the reset." },
 ];
 
 const measures = [
@@ -27,8 +27,8 @@ const measures = [
 ];
 
 /**
- * ABOUT — the advisory, in its own words. Statement of intent, belief,
- * the standards we hold, and the shape of the work — closing on the
+ * ABOUT - the advisory, in its own words. Statement of intent, belief,
+ * the standards we hold, and the shape of the work - closing on the
  * quiet numbers that matter.
  */
 export default function AboutPage() {
@@ -52,7 +52,7 @@ export default function AboutPage() {
           <TextReveal
             as="h2"
             lines={["The rarest luxury is not", "a suite or a jet.", "It is a body, and a mind,", "restored."]}
-            className="mt-10 text-display-md font-light"
+            className="mt-10 text-display-md font-normal"
             lineClassName="text-foreground"
           />
         </div>
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <Eyebrow>Our Story</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-6 font-serif text-4xl font-light text-foreground">Born of a simple frustration.</h2>
+              <h2 className="mt-6 font-serif text-4xl font-normal text-foreground">Born of a simple frustration.</h2>
             </Reveal>
             <div className="mt-8 flex flex-col gap-6 prose-luxe">
               <Reveal delay={0.1}>
@@ -81,7 +81,7 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.15}>
                 <p>
-                  So we built the advisor we wished existed — independent of the houses, intimate with each, and bound to
+                  So we built the advisor we wished existed - independent of the houses, intimate with each, and bound to
                   a single loyalty: <strong>the person in front of us.</strong> Not a booking engine. A confidant with a
                   passport and a physician's address book.
                 </p>
@@ -98,9 +98,9 @@ export default function AboutPage() {
           <Stagger className="mt-16 grid gap-x-12 gap-y-4 md:grid-cols-2">
             {standards.map((s, i) => (
               <StaggerItem key={s.k} className="flex gap-6 border-t border-line py-10">
-                <span className="font-serif text-lg font-light text-gold">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-serif text-lg font-normal text-gold">{String(i + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3 className="font-serif text-3xl font-light text-foreground">{s.k}</h3>
+                  <h3 className="font-serif text-3xl font-normal text-foreground">{s.k}</h3>
                   <p className="mt-4 max-w-md leading-relaxed text-muted">{s.body}</p>
                 </div>
               </StaggerItem>
@@ -114,8 +114,8 @@ export default function AboutPage() {
         <div className="container grid grid-cols-2 gap-y-12 md:grid-cols-4">
           {measures.map((m) => (
             <Reveal key={m.label} className="text-center">
-              <div className="font-serif text-6xl font-light text-ivory md:text-7xl">{m.figure}</div>
-              <div className="mt-4 overline text-ivory/50">{m.label}</div>
+              <div className="font-serif text-6xl font-normal text-ivory md:text-7xl">{m.figure}</div>
+              <div className="mt-4 eyebrow text-ivory/50">{m.label}</div>
             </Reveal>
           ))}
         </div>

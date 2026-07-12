@@ -4,7 +4,7 @@ import { TextReveal } from "@/components/motion/TextReveal";
 import { Reveal } from "@/components/motion/Reveal";
 
 /**
- * PageHero — the consistent opening band for every interior page. A tall
+ * PageHero - the consistent opening band for every interior page. A tall
  * cinematic plate under a charcoal wash so the transparent navbar's ivory
  * type always reads. Eyebrow, a serif title drawn up from a mask, and an
  * optional standfirst. Breadcrumbs are quiet and optional.
@@ -47,7 +47,7 @@ export function PageHero({
       <div className="container relative z-10 pb-16 pt-40 md:pb-24">
         {breadcrumb && (
           <Reveal>
-            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 overline text-ivory/60">
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 eyebrow text-ivory/60">
               {breadcrumb.map((b, i) => (
                 <span key={b.href} className="flex items-center gap-2">
                   <Link href={b.href} className="transition-colors hover:text-ivory">
@@ -61,7 +61,7 @@ export function PageHero({
         )}
 
         <Reveal>
-          <span className="flex items-center gap-4 overline text-ivory/70">
+          <span className="flex items-center gap-4 eyebrow text-ivory/70">
             <span className="h-px w-12 bg-gold/70" />
             {eyebrow}
           </span>
@@ -71,7 +71,7 @@ export function PageHero({
           as="h1"
           lines={titleLines}
           delay={0.1}
-          className="mt-8 max-w-5xl text-display-lg font-light text-ivory"
+          className="mt-8 max-w-5xl text-display-lg font-normal text-ivory"
         />
 
         {standfirst && (

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * RESORTS INDEX — the collection.
+ * RESORTS INDEX - the collection.
  *
  * A deliberately small, editorially-paced grid. Two columns on a gentle
  * diagonal (alternate columns drop), so the page reads like a portfolio,
@@ -25,7 +25,7 @@ export default function ResortsPage() {
       <PageHero
         eyebrow="The Collection"
         titleLines={["Nine houses.", "No compromises."]}
-        standfirst="We curate a small collection rather than a large catalogue. Each house earns its place by doing one thing — longevity, detox, sleep, medical wellness — better than anywhere else on earth."
+        standfirst="We curate a small collection rather than a large catalogue. Each house earns its place by doing one thing - longevity, detox, sleep, medical wellness - better than anywhere else on earth."
         tone="collection-hero"
         alt="A sweep of the world's finest wellness landscapes"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Collection", href: "/resorts" }]}
@@ -52,7 +52,7 @@ export default function ResortsPage() {
       <CTASection
         eyebrow="Uncertain where to begin?"
         lines={["Let us shortlist", "the right house for you."]}
-        body="Tell us your goals and your calendar; we will return two or three houses matched to both — with a clear reason for each."
+        body="Tell us your goals and your calendar; we will return two or three houses matched to both - with a clear reason for each."
         cta="Speak With an Advisor"
       />
     </>

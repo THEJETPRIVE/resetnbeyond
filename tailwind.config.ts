@@ -57,8 +57,8 @@ const config: Config = {
         accent: "hsl(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
-        // Cormorant Garamond — thin, high-contrast display serif (Aman-esque)
-        serif: ["var(--font-display)", "Cormorant Garamond", "serif"],
+        // Boska — high-contrast display serif used across all headings
+        serif: ["var(--font-display)", "Boska", "serif"],
         // Inter — quiet grotesque for body, labels and UI
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
       },

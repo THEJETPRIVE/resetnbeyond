@@ -1,8 +1,8 @@
 /**
- * PROGRAMS — the disciplines we curate for.
+ * PROGRAMS - the disciplines we curate for.
  *
  * A guest rarely arrives asking for a resort; they arrive with a
- * question — about sleep, longevity, burnout. Programs are the lens
+ * question - about sleep, longevity, burnout. Programs are the lens
  * through which the collection is organised around those questions.
  */
 
@@ -28,7 +28,7 @@ export const programs: Program[] = [
     eyebrow: "Healthspan",
     tagline: "Add life to years, not merely years to life.",
     intro: [
-      "Longevity is no longer a question of lifespan but of healthspan — the number of years lived in full vigour. The finest clinics now measure biological age, epigenetic markers and cellular vitality, then act on them.",
+      "Longevity is no longer a question of lifespan but of healthspan - the number of years lived in full vigour. The finest clinics now measure biological age, epigenetic markers and cellular vitality, then act on them.",
       "We match you to the houses defining this frontier, where longevity is a physician-led protocol rather than a supplement shelf.",
     ],
     signals: [
@@ -38,7 +38,7 @@ export const programs: Program[] = [
       "A decades-long horizon and the resources to invest in it",
     ],
     approach: [
-      { title: "Diagnose deeply", body: "Comprehensive screening — genetic, epigenetic and cardiovascular — to establish a true baseline." },
+      { title: "Diagnose deeply", body: "Comprehensive screening - genetic, epigenetic and cardiovascular - to establish a true baseline." },
       { title: "Intervene precisely", body: "Cellular, nutritional and regenerative protocols calibrated to your biology, not a template." },
       { title: "Sustain at home", body: "A forward protocol and cadence of review so gains compound long after departure." },
     ],
@@ -50,7 +50,7 @@ export const programs: Program[] = [
     eyebrow: "Purification",
     tagline: "Subtract, and let the body remember itself.",
     intro: [
-      "A true detox is a medical process, not a juice. The leading clinics guide the body's own elimination systems — hepatic, digestive, lymphatic — through supervised protocols that leave metabolism reset and energy restored.",
+      "A true detox is a medical process, not a juice. The leading clinics guide the body's own elimination systems - hepatic, digestive, lymphatic - through supervised protocols that leave metabolism reset and energy restored.",
       "We reserve programmes that are rigorous, physician-supervised and, crucially, kind to the guest who must return to a demanding life.",
     ],
     signals: [
@@ -70,10 +70,10 @@ export const programs: Program[] = [
     slug: "executive-reset",
     name: "Executive Reset",
     eyebrow: "Performance",
-    tagline: "For the mind that cannot afford to stop — and must.",
+    tagline: "For the mind that cannot afford to stop - and must.",
     intro: [
       "The cost of sustained performance is rarely visible until it is acute. An executive reset intervenes before that point, restoring sleep, stress physiology and cognitive clarity in a concentrated, results-led window.",
-      "We curate the programmes built for the time-poor principal — measurable, discreet, and calibrated to a life that will not pause for long.",
+      "We curate the programmes built for the time-poor principal - measurable, discreet, and calibrated to a life that will not pause for long.",
     ],
     signals: [
       "Burnout, or its early warning signs",
@@ -94,7 +94,7 @@ export const programs: Program[] = [
     eyebrow: "Balance",
     tagline: "Care attuned to the female body, across every chapter.",
     intro: [
-      "From hormonal balance to perimenopause, fertility to bone and cardiovascular health, women's physiology deserves programmes designed for it — not adapted from a male default.",
+      "From hormonal balance to perimenopause, fertility to bone and cardiovascular health, women's physiology deserves programmes designed for it - not adapted from a male default.",
       "We curate clinics with genuine expertise in the female body, delivered with the discretion and depth the subject warrants.",
     ],
     signals: [
@@ -116,7 +116,7 @@ export const programs: Program[] = [
     eyebrow: "Restoration",
     tagline: "Rebuild the most valuable performance asset of all.",
     intro: [
-      "Sleep is the foundation beneath every other intervention. When it fails, cognition, mood, metabolism and immunity follow. The leading clinics now treat sleep as a discipline in its own right — measurable, and recoverable.",
+      "Sleep is the foundation beneath every other intervention. When it fails, cognition, mood, metabolism and immunity follow. The leading clinics now treat sleep as a discipline in its own right - measurable, and recoverable.",
       "We match you to programmes that rebuild the architecture of deep sleep through chronobiology, environment and mind-body practice.",
     ],
     signals: [
@@ -138,7 +138,7 @@ export const programs: Program[] = [
     eyebrow: "Optimisation",
     tagline: "The measurable pursuit of your own upper limit.",
     intro: [
-      "Biohacking, done seriously, is data-driven self-optimisation — cryotherapy, hyperbaric oxygen, red light, IV protocols and continuous biomarkers, deployed with clinical judgement rather than gadget enthusiasm.",
+      "Biohacking, done seriously, is data-driven self-optimisation - cryotherapy, hyperbaric oxygen, red light, IV protocols and continuous biomarkers, deployed with clinical judgement rather than gadget enthusiasm.",
       "We curate the clinics where these tools are wielded by physicians, integrated into a coherent programme rather than sold à la carte.",
     ],
     signals: [
@@ -160,7 +160,7 @@ export const programs: Program[] = [
     eyebrow: "Nourishment",
     tagline: "Food as the first and most enduring medicine.",
     intro: [
-      "Every serious wellness programme rests on nutrition — from macrobiotic and Ayurvedic traditions to microbiome science and metabolic testing. The best clinics make therapeutic eating genuinely desirable.",
+      "Every serious wellness programme rests on nutrition - from macrobiotic and Ayurvedic traditions to microbiome science and metabolic testing. The best clinics make therapeutic eating genuinely desirable.",
       "We curate the houses where nutrition is both clinically precise and a pleasure at the table, and where you relearn how to eat for the decades ahead.",
     ],
     signals: [
@@ -182,7 +182,7 @@ export const programs: Program[] = [
     eyebrow: "Foresight",
     tagline: "The most sophisticated medicine is the kind you never need.",
     intro: [
-      "Preventive health is the discipline of finding what has not yet declared itself — through comprehensive screening, biomarkers and imaging — and acting while action is still elective.",
+      "Preventive health is the discipline of finding what has not yet declared itself - through comprehensive screening, biomarkers and imaging - and acting while action is still elective.",
       "We curate clinics that pair genuine diagnostic depth with the hospitality to make an annual health investment something you anticipate rather than endure.",
     ],
     signals: [
@@ -192,7 +192,7 @@ export const programs: Program[] = [
       "The preference to prevent rather than to treat",
     ],
     approach: [
-      { title: "Screen comprehensively", body: "Full diagnostics — bloodwork, imaging, cardiovascular and metabolic — in a single considered stay." },
+      { title: "Screen comprehensively", body: "Full diagnostics - bloodwork, imaging, cardiovascular and metabolic - in a single considered stay." },
       { title: "Interpret expertly", body: "Physician-led interpretation that turns data into a clear, prioritised plan." },
       { title: "Act early", body: "Interventions and monitoring that address risk while it remains elective." },
     ],
@@ -204,7 +204,7 @@ export const programs: Program[] = [
     eyebrow: "Rigour",
     tagline: "Where five-star hospitality meets genuine medicine.",
     intro: [
-      "Medical wellness is the rare hybrid the finest clinics have perfected — real diagnostics, physicians and clinical protocols, delivered with the grace of a grand hotel. Neither hospital nor spa, but the best of both.",
+      "Medical wellness is the rare hybrid the finest clinics have perfected - real diagnostics, physicians and clinical protocols, delivered with the grace of a grand hotel. Neither hospital nor spa, but the best of both.",
       "We curate the houses that never ask you to choose between clinical seriousness and true comfort.",
     ],
     signals: [

@@ -10,7 +10,7 @@ import { Wordmark } from "@/components/layout/Wordmark";
 import { cn } from "@/lib/utils";
 
 /**
- * Navbar — the threshold.
+ * Navbar - the threshold.
  *
  * Every page opens on a dark hero band, so at the top the bar is
  * transparent with ivory type. After a short scroll it condenses into a
@@ -45,7 +45,7 @@ export function Navbar() {
       >
         <div className="container flex h-20 items-center justify-between md:h-24">
           {/* Wordmark */}
-          <Link href="/" aria-label="Reset & Beyond — home" className="relative z-10">
+          <Link href="/" aria-label="Reset & Beyond - home" className="relative z-10">
             <Wordmark className={cn("transition-colors duration-500", light ? "text-ivory" : "text-foreground")} />
           </Link>
 
@@ -128,8 +128,8 @@ export function Navbar() {
                       onClick={() => setOpenFlyout(null)}
                       className="group flex items-baseline justify-between border-b border-line/60 py-3 transition-colors hover:border-foreground"
                     >
-                      <span className="font-serif text-2xl font-light text-foreground">{child.label}</span>
-                      {child.note && <span className="overline text-muted">{child.note}</span>}
+                      <span className="font-serif text-2xl font-normal text-foreground">{child.label}</span>
+                      {child.note && <span className="eyebrow text-muted">{child.note}</span>}
                     </Link>
                   ))}
               </div>
@@ -165,7 +165,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block border-b border-line py-5 font-serif text-4xl font-light text-foreground"
+                    className="block border-b border-line py-5 font-serif text-4xl font-normal text-foreground"
                   >
                     {item.label}
                   </Link>

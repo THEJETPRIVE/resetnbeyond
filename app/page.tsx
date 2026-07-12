@@ -13,11 +13,11 @@ import { HomeFaq } from "@/components/home/HomeFaq";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 /**
- * HOME — the flagship.
+ * HOME - the flagship.
  *
  * The scroll is composed as a piece of music: a cinematic overture (Hero),
  * a quiet statement of intent, then a slow build through the collection,
- * the disciplines, the service and the atlas — rising to social proof and
+ * the disciplines, the service and the atlas - rising to social proof and
  * editorial authority, and resolving on a single, unhurried invitation.
  *
  * Section rhythm alternates paper / surface / ink so the eye is led

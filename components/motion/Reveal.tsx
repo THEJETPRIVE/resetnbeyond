@@ -4,7 +4,7 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
- * Reveal — the house entrance. Content rises a few pixels and settles
+ * Reveal - the house entrance. Content rises a few pixels and settles
  * into focus on the house easing curve. Long, slow, and only once.
  * Honours prefers-reduced-motion by rendering content immediately.
  */
@@ -42,7 +42,7 @@ export function Reveal({
 }
 
 /**
- * Stagger — a parent that releases its children in sequence.
+ * Stagger - a parent that releases its children in sequence.
  * Pair with <StaggerItem/> for lists, grids and figure clusters.
  */
 const staggerParent: Variants = {

@@ -1,5 +1,5 @@
 /**
- * SITE — navigation, identity and contact.
+ * SITE - navigation, identity and contact.
  * A single source of truth for structural content shared across the shell.
  */
 

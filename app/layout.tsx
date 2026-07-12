@@ -11,11 +11,11 @@ const siteUrl = "https://resetandbeyond.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Reset & Beyond — Beyond Wellness. Beyond Luxury.",
-    template: "%s — Reset & Beyond",
+    default: "Reset & Beyond - Beyond Wellness. Beyond Luxury.",
+    template: "%s - Reset & Beyond",
   },
   description:
-    "An invitation-only wellness concierge for the world's most discerning few. We curate, compare and reserve the finest transformational retreats — from Chenot to Clinique La Prairie, JOALI BEING to Ananda.",
+    "An invitation-only wellness concierge for the world's most discerning few. We curate, compare and reserve the finest transformational retreats - from Chenot to Clinique La Prairie, JOALI BEING to Ananda.",
   keywords: [
     "luxury wellness concierge",
     "transformational retreats",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Reset & Beyond — Beyond Wellness. Beyond Luxury.",
+    title: "Reset & Beyond - Beyond Wellness. Beyond Luxury.",
     description:
       "An invitation-only wellness concierge for the world's most discerning few.",
     siteName: "Reset & Beyond",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reset & Beyond — Beyond Wellness. Beyond Luxury.",
+    title: "Reset & Beyond - Beyond Wellness. Beyond Luxury.",
     description:
       "An invitation-only wellness concierge for the world's most discerning few.",
   },
@@ -46,13 +46,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
       <head>
-        {/* Set palette before first paint — no flash of the wrong theme */}
+        {/* Set palette before first paint - no flash of the wrong theme */}
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
         <ThemeProvider>
           <SmoothScroll>
-            {/* Skip link — accessibility first, always */}
+            {/* Skip link - accessibility first, always */}
             <a
               href="#main"
               className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[100] focus:rounded-full focus:bg-charcoal focus:px-5 focus:py-3 focus:text-sm focus:text-ivory"

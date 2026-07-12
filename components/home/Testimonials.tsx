@@ -7,7 +7,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { testimonials } from "@/data/testimonials";
 
 /**
- * Testimonials — voices, kept anonymous by design. One large quotation at
+ * Testimonials - voices, kept anonymous by design. One large quotation at
  * a time, crossfading, attributed only by world and never by name. The
  * restraint is the credibility.
  */
@@ -31,7 +31,7 @@ export function Testimonials() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
-              <blockquote className="font-serif text-[1.75rem] font-light italic leading-[1.35] text-ivory md:text-4xl md:leading-[1.4]">
+              <blockquote className="font-serif text-[1.75rem] font-normal italic leading-[1.35] text-ivory md:text-4xl md:leading-[1.4]">
                 <span className="text-gilded" aria-hidden>
                   “
                 </span>
@@ -41,7 +41,7 @@ export function Testimonials() {
                 </span>
               </blockquote>
               <figcaption className="mt-10">
-                <span className="block font-serif text-xl font-light text-ivory/90">{t.attribution}</span>
+                <span className="block font-serif text-xl font-normal text-ivory/90">{t.attribution}</span>
                 <span className="mt-1 block text-sm text-ivory/50">{t.context}</span>
               </figcaption>
             </motion.figure>

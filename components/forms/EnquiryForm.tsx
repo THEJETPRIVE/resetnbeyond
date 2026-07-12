@@ -8,7 +8,7 @@ import { programs } from "@/data/programs";
 import { cn } from "@/lib/utils";
 
 /**
- * EnquiryForm — the conversion surface, dressed as a private application.
+ * EnquiryForm - the conversion surface, dressed as a private application.
  *
  * Underlined fields on bare paper, interests chosen as quiet chips, and a
  * composed confirmation rather than a jarring alert. No backend is wired;
@@ -32,7 +32,7 @@ function Field({
 }) {
   return (
     <label className="group block">
-      <span className="overline text-muted">
+      <span className="eyebrow text-muted">
         {label}
         {required && <span className="ml-1 text-gold">*</span>}
       </span>
@@ -41,7 +41,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-3 w-full border-b border-line bg-transparent pb-3 font-serif text-2xl font-light text-foreground outline-none transition-colors duration-300 placeholder:text-muted/40 focus:border-foreground"
+        className="mt-3 w-full border-b border-line bg-transparent pb-3 font-serif text-2xl font-normal text-foreground outline-none transition-colors duration-300 placeholder:text-muted/40 focus:border-foreground"
       />
     </label>
   );
@@ -75,7 +75,7 @@ export function EnquiryForm() {
             <span className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/50 text-gold">
               <Check strokeWidth={1.3} />
             </span>
-            <h3 className="mt-8 font-serif text-4xl font-light text-foreground">Thank you.</h3>
+            <h3 className="mt-8 font-serif text-4xl font-normal text-foreground">Thank you.</h3>
             <p className="prose-luxe mx-auto mt-4 text-center">
               Your enquiry is received in confidence. A private advisor will be in touch within one business day. We look
               forward to the conversation.
@@ -99,7 +99,7 @@ export function EnquiryForm() {
 
             {/* Interests */}
             <fieldset>
-              <legend className="overline text-muted">Areas of interest</legend>
+              <legend className="eyebrow text-muted">Areas of interest</legend>
               <div className="mt-5 flex flex-wrap gap-3">
                 {programs.map((p) => {
                   const active = interests.includes(p.slug);
@@ -126,7 +126,7 @@ export function EnquiryForm() {
 
             {/* Budget */}
             <fieldset>
-              <legend className="overline text-muted">Indicative investment (per stay)</legend>
+              <legend className="eyebrow text-muted">Indicative investment (per stay)</legend>
               <div className="mt-5 flex flex-wrap gap-3">
                 {budgets.map((b) => (
                   <button
@@ -150,12 +150,12 @@ export function EnquiryForm() {
 
             {/* Message */}
             <label className="block">
-              <span className="overline text-muted">What are you seeking?</span>
+              <span className="eyebrow text-muted">What are you seeking?</span>
               <textarea
                 name="message"
                 rows={4}
-                placeholder="A few words on what has brought you here — the more you share, the more considered our reply."
-                className="mt-3 w-full resize-none border-b border-line bg-transparent pb-3 font-serif text-xl font-light leading-relaxed text-foreground outline-none transition-colors duration-300 placeholder:text-muted/40 focus:border-foreground"
+                placeholder="A few words on what has brought you here - the more you share, the more considered our reply."
+                className="mt-3 w-full resize-none border-b border-line bg-transparent pb-3 font-serif text-xl font-normal leading-relaxed text-foreground outline-none transition-colors duration-300 placeholder:text-muted/40 focus:border-foreground"
               />
             </label>
 

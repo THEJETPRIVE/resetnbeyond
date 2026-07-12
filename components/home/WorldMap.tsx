@@ -10,7 +10,7 @@ import { TextReveal } from "@/components/motion/TextReveal";
 import { resorts } from "@/data/resorts";
 
 /**
- * WorldMap — a private atlas.
+ * WorldMap - a private atlas.
  *
  * Rather than clip-art continents, houses are plotted by their true
  * coordinates onto a refined equirectangular graticule and faint
@@ -45,7 +45,7 @@ export function WorldMap() {
             <Reveal>
               <Eyebrow>The Atlas</Eyebrow>
             </Reveal>
-            <TextReveal as="h2" lines={["Nine houses.", "Four continents."]} className="mt-8 text-display-md font-light" />
+            <TextReveal as="h2" lines={["Nine houses.", "Four continents."]} className="mt-8 text-display-md font-normal" />
           </div>
           <Reveal delay={0.1}>
             <p className="prose-luxe md:pb-2">
@@ -135,10 +135,10 @@ export function WorldMap() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="overline text-muted">
+                <span className="eyebrow text-muted">
                   {selected.country} · {selected.region.split(",")[0]}
                 </span>
-                <h3 className="mt-4 font-serif text-4xl font-light text-foreground md:text-5xl">{selected.name}</h3>
+                <h3 className="mt-4 font-serif text-4xl font-normal text-foreground md:text-5xl">{selected.name}</h3>
                 <p className="mt-5 max-w-sm leading-relaxed text-muted">{selected.cardline}</p>
                 <Link
                   href={`/resorts/${selected.slug}`}

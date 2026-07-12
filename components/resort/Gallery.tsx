@@ -8,7 +8,7 @@ import { EditorialImage } from "@/components/media/EditorialImage";
 import { StaggerItem } from "@/components/motion/Reveal";
 
 /**
- * Gallery — a considered plate arrangement with a calm lightbox. Three
+ * Gallery - a considered plate arrangement with a calm lightbox. Three
  * images on a gentle rhythm (the centre one lifted), each opening to a
  * full-bleed view on a dimmed charcoal ground. Escape and click-out close.
  */

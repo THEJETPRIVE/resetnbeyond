@@ -1,5 +1,5 @@
 /**
- * TESTIMONIALS — voices, kept anonymous by design.
+ * TESTIMONIALS - voices, kept anonymous by design.
  *
  * Discretion is the product. Our clients are named by their world, never
  * their name. Attributions are deliberately non-identifying.
@@ -14,7 +14,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "I have stayed everywhere. What I had never been given was a plan — someone who understood the difference between a beautiful hotel and the right clinic for my body. That distinction was worth everything.",
+      "I have stayed everywhere. What I had never been given was a plan - someone who understood the difference between a beautiful hotel and the right clinic for my body. That distinction was worth everything.",
     attribution: "Founder & Chairman",
     context: "Technology · reset at Chenot Palace Weggis",
   },

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 
 /**
- * SmoothScroll — the single source of momentum for the whole site.
+ * SmoothScroll - the single source of momentum for the whole site.
  *
  * Lenis intercepts wheel/touch input and interpolates the scroll
  * position on a custom easing curve, giving every page that weighted,
@@ -18,7 +18,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     const lenis = new Lenis({
       duration: 1.15,
-      // A long, luxurious deceleration — never abrupt.
+      // A long, luxurious deceleration - never abrupt.
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 0.9,

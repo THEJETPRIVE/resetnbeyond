@@ -4,7 +4,7 @@ import type { Program } from "@/data/programs";
 import { cn } from "@/lib/utils";
 
 /**
- * ProgramRow — disciplines as an editorial index, not a grid of cards.
+ * ProgramRow - disciplines as an editorial index, not a grid of cards.
  * A numbered, hairline-ruled list where the whole row is the target and
  * the serif name slides gently to greet the cursor.
  */
@@ -25,12 +25,12 @@ export function ProgramRow({
         className,
       )}
     >
-      <span className="font-serif text-lg font-light text-muted md:text-xl">
+      <span className="font-serif text-lg font-normal text-muted md:text-xl">
         {String(index + 1).padStart(2, "0")}
       </span>
 
       <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-8">
-        <h3 className="font-serif text-3xl font-light text-foreground transition-transform duration-500 ease-luxe group-hover:translate-x-2 md:text-5xl">
+        <h3 className="font-serif text-3xl font-normal text-foreground transition-transform duration-500 ease-luxe group-hover:translate-x-2 md:text-5xl">
           {program.name}
         </h3>
         <p className="max-w-md text-sm text-muted md:text-right md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100">

@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const resort = getResort(params.slug);
   if (!resort) return {};
   return {
-    title: `${resort.name} — ${resort.country}`,
+    title: `${resort.name} - ${resort.country}`,
     description: resort.tagline,
   };
 }
@@ -30,7 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 const programName = (slug: string) => programs.find((p) => p.slug === slug)?.name ?? slug;
 
 /**
- * RESORT DETAIL — the house, in full.
+ * RESORT DETAIL - the house, in full.
  *
  * A long, editorial descent: arrival → the essentials → philosophy →
  * who it serves → its signature programmes and medical depth → how one
@@ -87,15 +87,15 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
               {[
                 ["Location", resort.region],
                 ["Country", resort.country],
-                ["Established", resort.established ?? "—"],
+                ["Established", resort.established ?? "-"],
               ].map(([k, v]) => (
                 <div key={k}>
-                  <dt className="overline text-muted">{k}</dt>
-                  <dd className="mt-2 font-serif text-xl font-light text-foreground">{v}</dd>
+                  <dt className="eyebrow text-muted">{k}</dt>
+                  <dd className="mt-2 font-serif text-xl font-normal text-foreground">{v}</dd>
                 </div>
               ))}
               <div>
-                <dt className="overline text-muted">Best for</dt>
+                <dt className="eyebrow text-muted">Best for</dt>
                 <dd className="mt-3 flex flex-wrap gap-2">
                   {resort.categories.map((c) => (
                     <Link
@@ -120,7 +120,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
             <Eyebrow className="justify-center text-ivory/50">Wellness Philosophy</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-10 font-serif text-3xl font-light italic leading-[1.4] text-ivory md:text-[2.6rem]">
+            <p className="mt-10 font-serif text-3xl font-normal italic leading-[1.4] text-ivory md:text-[2.6rem]">
               “{resort.philosophy}”
             </p>
           </Reveal>
@@ -132,12 +132,12 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
         <div className="container grid gap-16 md:grid-cols-2">
           <Reveal>
             <Eyebrow>The Setting</Eyebrow>
-            <h2 className="mt-6 font-serif text-3xl font-light text-foreground">Where it stands</h2>
+            <h2 className="mt-6 font-serif text-3xl font-normal text-foreground">Where it stands</h2>
             <p className="mt-6 prose-luxe">{resort.location}</p>
           </Reveal>
           <Reveal delay={0.08}>
             <Eyebrow>Who It Is For</Eyebrow>
-            <h2 className="mt-6 font-serif text-3xl font-light text-foreground">A guest in mind</h2>
+            <h2 className="mt-6 font-serif text-3xl font-normal text-foreground">A guest in mind</h2>
             <p className="mt-6 prose-luxe">{resort.whoFor}</p>
           </Reveal>
         </div>
@@ -153,8 +153,8 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
                 key={sp.name}
                 className="grid gap-4 border-b border-line py-8 md:grid-cols-[1fr_auto_1.4fr] md:items-baseline md:gap-10"
               >
-                <h3 className="font-serif text-3xl font-light text-foreground md:text-4xl">{sp.name}</h3>
-                <span className="overline text-gold">{sp.duration}</span>
+                <h3 className="font-serif text-3xl font-normal text-foreground md:text-4xl">{sp.name}</h3>
+                <span className="eyebrow text-gold">{sp.duration}</span>
                 <p className="leading-relaxed text-muted">{sp.summary}</p>
               </StaggerItem>
             ))}
@@ -167,12 +167,12 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
         <div className="container grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <Eyebrow>Medical Expertise</Eyebrow>
-            <TextReveal as="h2" lines={["Substance", "beneath the", "serenity."]} className="mt-6 text-display-sm font-light" />
+            <TextReveal as="h2" lines={["Substance", "beneath the", "serenity."]} className="mt-6 text-display-sm font-normal" />
           </Reveal>
           <Stagger className="grid gap-x-10 sm:grid-cols-2">
             {resort.medicalExpertise.map((m, i) => (
               <StaggerItem key={i} className="flex gap-5 border-t border-line py-6">
-                <span className="font-serif text-lg font-light text-gold">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-serif text-lg font-normal text-gold">{String(i + 1).padStart(2, "0")}</span>
                 <p className="leading-relaxed text-foreground/85">{m}</p>
               </StaggerItem>
             ))}
@@ -189,7 +189,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
             </Reveal>
             <Reveal delay={0.08}>
               <Eyebrow>Accommodation</Eyebrow>
-              <h2 className="mt-6 font-serif text-4xl font-light text-foreground">Where you rest</h2>
+              <h2 className="mt-6 font-serif text-4xl font-normal text-foreground">Where you rest</h2>
               <p className="mt-6 prose-luxe">{resort.accommodation}</p>
             </Reveal>
           </div>
@@ -199,7 +199,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
             </Reveal>
             <Reveal className="lg:order-1">
               <Eyebrow>Cuisine</Eyebrow>
-              <h2 className="mt-6 font-serif text-4xl font-light text-foreground">What nourishes you</h2>
+              <h2 className="mt-6 font-serif text-4xl font-normal text-foreground">What nourishes you</h2>
               <p className="mt-6 prose-luxe">{resort.cuisine}</p>
             </Reveal>
           </div>
@@ -222,12 +222,12 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
           <div>
             <Reveal>
               <Eyebrow>Experiences</Eyebrow>
-              <h2 className="mt-6 font-serif text-4xl font-light text-foreground">Beyond the programme</h2>
+              <h2 className="mt-6 font-serif text-4xl font-normal text-foreground">Beyond the programme</h2>
             </Reveal>
             <Stagger className="mt-10 border-t border-line">
               {resort.experiences.map((e, i) => (
                 <StaggerItem key={i} className="flex items-baseline gap-5 border-b border-line py-5">
-                  <span className="text-gold">—</span>
+                  <span className="text-gold">-</span>
                   <p className="text-lg font-light text-foreground/85">{e}</p>
                 </StaggerItem>
               ))}
@@ -263,7 +263,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
             <Reveal>
               <Eyebrow>Good to Know</Eyebrow>
             </Reveal>
-            <TextReveal as="h2" lines={["Before", "you go."]} className="mt-6 text-display-sm font-light" />
+            <TextReveal as="h2" lines={["Before", "you go."]} className="mt-6 text-display-sm font-normal" />
           </div>
           <Reveal delay={0.1}>
             <Accordion items={resort.faq} />
@@ -290,7 +290,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
       <CTASection
         eyebrow="Reserve"
         lines={[`Begin your stay`, `at ${resort.shortName}.`]}
-        body="Share your dates and intentions; your advisor will confirm the programme, the suite and every detail in between — in confidence."
+        body="Share your dates and intentions; your advisor will confirm the programme, the suite and every detail in between - in confidence."
         cta="Enquire Privately"
       />
     </>

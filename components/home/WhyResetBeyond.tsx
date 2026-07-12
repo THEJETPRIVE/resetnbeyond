@@ -4,7 +4,7 @@ import { TextReveal } from "@/components/motion/TextReveal";
 import { EditorialImage } from "@/components/media/EditorialImage";
 
 /**
- * WhyResetBeyond — the case for an advisor, made quietly. A treated
+ * WhyResetBeyond - the case for an advisor, made quietly. A treated
  * portrait plate on the left holds the eye; four principles on the right
  * distinguish an independent advisory from a booking engine.
  */
@@ -15,7 +15,7 @@ const principles = [
   },
   {
     title: "Known in person, not from a brochure.",
-    body: "We have walked these estates and met their physicians. Our counsel is first-hand, current, and candid about what each house does — and does not — do well.",
+    body: "We have walked these estates and met their physicians. Our counsel is first-hand, current, and candid about what each house does - and does not - do well.",
   },
   {
     title: "Discretion as the default.",
@@ -35,7 +35,7 @@ export function WhyResetBeyond() {
         <Reveal className="order-2 lg:order-1">
           <EditorialImage
             tone="why-advisory-portrait"
-            alt="A quiet study — the atmosphere of a private advisory"
+            alt="A quiet study - the atmosphere of a private advisory"
             className="aspect-[4/5] w-full"
             parallax
             sizes="(max-width: 1024px) 100vw, 45vw"
@@ -50,7 +50,7 @@ export function WhyResetBeyond() {
           <TextReveal
             as="h2"
             lines={["The difference between", "a booking and", "an introduction."]}
-            className="mt-8 text-display-md font-light text-ivory"
+            className="mt-8 text-display-md font-normal text-ivory"
           />
 
           <Stagger className="mt-14 flex flex-col">
@@ -59,9 +59,9 @@ export function WhyResetBeyond() {
                 key={p.title}
                 className="grid grid-cols-[auto_1fr] gap-6 border-t border-ivory/10 py-8"
               >
-                <span className="font-serif text-lg font-light text-gold/80">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-serif text-lg font-normal text-gold/80">{String(i + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3 className="font-serif text-2xl font-light text-ivory">{p.title}</h3>
+                  <h3 className="font-serif text-2xl font-normal text-ivory">{p.title}</h3>
                   <p className="mt-3 max-w-md text-ivory/60">{p.body}</p>
                 </div>
               </StaggerItem>

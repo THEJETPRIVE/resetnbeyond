@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /*
- * RESET & BEYOND — Global foundation
+ * RESET & BEYOND - Global foundation
  * ==================================================================
  * Two palettes, one system. "Day" is the default warm-ivory light
  * theme; [data-theme="dark"] is the charcoal nocturne. Colours are
@@ -12,23 +12,23 @@
 
 @layer base {
   :root {
-    /* — Paper (warm neutrals) — */
+    /* - Paper (warm neutrals) - */
     --ivory: 40 33% 96%;      /* #F7F4EE warm ivory */
     --stone: 40 20% 92%;      /* stone white */
     --sand: 36 26% 86%;       /* warm sand */
 
-    /* — Ink (charcoal) — */
+    /* - Ink (charcoal) - */
     --charcoal: 30 6% 14%;    /* #26241F soft charcoal */
     --ink: 30 8% 9%;          /* deepest ink */
 
-    /* — Botanical accent — */
+    /* - Botanical accent - */
     --sage: 110 12% 52%;      /* muted sage */
     --sage-deep: 120 14% 30%; /* deep sage for hover */
 
-    /* — Metallic (hairlines only) — */
+    /* - Metallic (hairlines only) - */
     --gold: 38 44% 58%;       /* restrained antique gold */
 
-    /* — Semantic, theme-aware — */
+    /* - Semantic, theme-aware - */
     --background: var(--ivory);
     --surface: var(--stone);
     --foreground: var(--charcoal);
@@ -76,8 +76,8 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-display), "Cormorant Garamond", serif;
-    font-weight: 300;
+    font-family: var(--font-display), "Boska", serif;
+    font-weight: 500;
     color: hsl(var(--foreground));
   }
 
@@ -96,7 +96,7 @@
   }
   ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted)); }
 
-  /* Focus ring — visible, elegant, never harsh */
+  /* Focus ring - visible, elegant, never harsh */
   :focus-visible {
     outline: 2px solid hsl(var(--accent));
     outline-offset: 3px;
@@ -105,8 +105,8 @@
 }
 
 @layer components {
-  /* Eyebrow / overline label — the quiet signal of a considered brand */
-  .overline {
+  /* Eyebrow / eyebrow label - the quiet signal of a considered brand */
+  .eyebrow {
     font-family: var(--font-body), sans-serif;
     font-size: 0.72rem;
     font-weight: 500;
@@ -141,7 +141,7 @@
 }
 
 @layer utilities {
-  /* Clip text to a fill — used for the gilded ampersand */
+  /* Clip text to a fill - used for the gilded ampersand */
   .text-gilded {
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(38 60% 72%) 50%, hsl(var(--gold)) 100%);
     -webkit-background-clip: text;

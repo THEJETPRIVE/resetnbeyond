@@ -6,9 +6,9 @@ import { Reveal } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
 
 /**
- * Footer — the long exhale. A final, unhurried invitation followed by a
+ * Footer - the long exhale. A final, unhurried invitation followed by a
  * quiet directory. Set on charcoal so the site closes in the nocturne
- * regardless of theme — a considered full stop.
+ * regardless of theme - a considered full stop.
  */
 export function Footer() {
   return (
@@ -17,20 +17,20 @@ export function Footer() {
       <div className="container border-b border-ivory/10 py-section">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-end">
           <div>
-            <span className="overline text-ivory/50">
+            <span className="eyebrow text-ivory/50">
               <span className="mr-3 inline-block h-px w-12 bg-gold/70 align-middle" />
               An invitation
             </span>
             <TextReveal
               as="h2"
               lines={["Some journeys begin", "with a conversation."]}
-              className="mt-8 text-display-md font-light text-ivory"
+              className="mt-8 text-display-md font-normal text-ivory"
             />
           </div>
           <Reveal delay={0.1} className="lg:pb-3">
             <p className="max-w-measure text-ivory/60">
               Membership is by introduction. Share a little of what you seek, and a private advisor will reply within one
-              business day — discreetly, and without obligation.
+              business day - discreetly, and without obligation.
             </p>
             <div className="mt-8">
               <ButtonLink href="/concierge" arrow className="bg-ivory text-charcoal hover:bg-sage hover:text-ivory">
@@ -55,7 +55,7 @@ export function Footer() {
 
         {Object.values(footerNav).map((col) => (
           <div key={col.title}>
-            <h3 className="overline text-ivory/40">{col.title}</h3>
+            <h3 className="eyebrow text-ivory/40">{col.title}</h3>
             <ul className="mt-6 flex flex-col gap-3">
               {col.links.map((l) => (
                 <li key={l.label}>

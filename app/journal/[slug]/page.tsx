@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 /**
- * JOURNAL ARTICLE — a reading experience. A cinematic opening, a narrow,
+ * JOURNAL ARTICLE - a reading experience. A cinematic opening, a narrow,
  * generous measure for the body, and two kindred essays to close.
  */
 export default function ArticlePage({ params }: { params: { slug: string } }) {
@@ -60,7 +60,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 <p
                   className={
                     i === 0
-                      ? "font-serif text-2xl font-light leading-relaxed text-foreground first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-7xl first-letter:font-normal first-letter:leading-[0.8] first-letter:text-gold md:text-3xl md:leading-relaxed"
+                      ? "font-serif text-2xl font-normal leading-relaxed text-foreground first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-7xl first-letter:font-medium first-letter:leading-[0.8] first-letter:text-gold md:text-3xl md:leading-relaxed"
                       : "text-lg leading-[1.8] text-foreground/80"
                   }
                 >
@@ -85,7 +85,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* More reading */}
       <Section tone="surface">
         <div className="container">
-          <span className="overline text-muted">Continue Reading</span>
+          <span className="eyebrow text-muted">Continue Reading</span>
           <Stagger className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
             {more.map((a) => (
               <StaggerItem key={a.slug}>

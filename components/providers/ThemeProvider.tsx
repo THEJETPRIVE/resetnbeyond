@@ -12,7 +12,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 /**
- * ThemeProvider — a warm ivory "day" and a charcoal "nocturne".
+ * ThemeProvider - a warm ivory "day" and a charcoal "nocturne".
  * The preference persists and follows the system default on first visit.
  * The DOM is stamped before paint via an inline script in <head> to
  * avoid any flash of the wrong palette.
@@ -44,7 +44,7 @@ export function useTheme() {
 
 /**
  * Inline, render-blocking snippet injected in <head> to set the theme
- * attribute before first paint — eliminating the theme-flash.
+ * attribute before first paint - eliminating the theme-flash.
  */
 export const themeInitScript = `
 (function(){try{

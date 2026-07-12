@@ -8,11 +8,11 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Speak with Reset & Beyond. Reach a private wellness advisor by message, telephone or through one of our four offices — Geneva, London, Singapore and Dubai.",
+    "Speak with Reset & Beyond. Reach a private wellness advisor by message, telephone or through one of our four offices - Geneva, London, Singapore and Dubai.",
 };
 
 /**
- * CONTACT — the direct approach. Contact particulars held on the left in a
+ * CONTACT - the direct approach. Contact particulars held on the left in a
  * quiet column; the enquiry form given the room to breathe on the right.
  */
 export default function ContactPage() {
@@ -36,14 +36,14 @@ export default function ContactPage() {
               <Eyebrow>Direct</Eyebrow>
               <div className="mt-6 flex flex-col gap-6">
                 <div>
-                  <span className="overline text-muted">Email</span>
-                  <a href={`mailto:${site.email}`} className="mt-2 block font-serif text-2xl font-light text-foreground transition-colors hover:text-sage-deep dark:hover:text-sage">
+                  <span className="eyebrow text-muted">Email</span>
+                  <a href={`mailto:${site.email}`} className="mt-2 block font-serif text-2xl font-normal text-foreground transition-colors hover:text-sage-deep dark:hover:text-sage">
                     {site.email}
                   </a>
                 </div>
                 <div>
-                  <span className="overline text-muted">Telephone</span>
-                  <a href={site.phoneHref} className="mt-2 block font-serif text-2xl font-light text-foreground transition-colors hover:text-sage-deep dark:hover:text-sage">
+                  <span className="eyebrow text-muted">Telephone</span>
+                  <a href={site.phoneHref} className="mt-2 block font-serif text-2xl font-normal text-foreground transition-colors hover:text-sage-deep dark:hover:text-sage">
                     {site.phone}
                   </a>
                 </div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <Eyebrow>Offices</Eyebrow>
               <ul className="mt-6 flex flex-col gap-3">
                 {site.offices.map((office) => (
-                  <li key={office} className="font-serif text-2xl font-light text-foreground">
+                  <li key={office} className="font-serif text-2xl font-normal text-foreground">
                     {office}
                   </li>
                 ))}
@@ -73,7 +73,7 @@ export default function ContactPage() {
           {/* Form */}
           <Reveal delay={0.1}>
             <div className="rounded-[2px] border border-line bg-surface p-8 md:p-12">
-              <h2 className="font-serif text-3xl font-light text-foreground">Send a message</h2>
+              <h2 className="font-serif text-3xl font-normal text-foreground">Send a message</h2>
               <p className="mt-3 text-muted">We will reply, in confidence, within one business day.</p>
               <div className="mt-12">
                 <EnquiryForm />

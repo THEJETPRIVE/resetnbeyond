@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
 
 /**
- * FinalCTA — the cinematic close before the footer. A full-bleed plate
+ * FinalCTA - the cinematic close before the footer. A full-bleed plate
  * under a charcoal wash, a single serif invitation, one button. The last
  * frame should feel like a held breath.
  */
@@ -30,17 +30,17 @@ export function FinalCTA() {
 
       <div className="container relative z-10 text-center">
         <Reveal>
-          <span className="overline text-ivory/60">Your invitation awaits</span>
+          <span className="eyebrow text-ivory/60">Your invitation awaits</span>
         </Reveal>
         <TextReveal
           as="h2"
           lines={["Every reset begins", "with a single conversation."]}
-          className="mx-auto mt-8 max-w-4xl text-display-lg font-light text-ivory"
+          className="mx-auto mt-8 max-w-4xl text-display-lg font-normal text-ivory"
           delay={0.05}
         />
         <Reveal delay={0.2}>
           <p className="mx-auto mt-8 max-w-xl text-lg text-ivory/70">
-            Share a little of what you seek. A private advisor will reply within one business day — discreetly, and
+            Share a little of what you seek. A private advisor will reply within one business day - discreetly, and
             without obligation.
           </p>
         </Reveal>

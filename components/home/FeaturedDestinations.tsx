@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { resorts } from "@/data/resorts";
 
 /**
- * FeaturedDestinations — three houses, shown as magazine plates on a
+ * FeaturedDestinations - three houses, shown as magazine plates on a
  * gentle diagonal so the eye travels rather than scans. Deliberately not
  * the full nine; scarcity is the point, and the full collection is one
  * quiet line away.
@@ -42,7 +42,7 @@ export function FeaturedDestinations() {
           {picks.map((resort, i) => (
             <StaggerItem
               key={resort.slug}
-              // The middle plate sits lower — an editorial diagonal
+              // The middle plate sits lower - an editorial diagonal
               className={i === 1 ? "md:mt-24" : ""}
             >
               <ResortCard resort={resort} priority={i === 0} />

@@ -5,14 +5,14 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
- * TextReveal — the signature headline entrance. Each line sits behind a
+ * TextReveal - the signature headline entrance. Each line sits behind a
  * mask and lifts into view in sequence, the way a curtain is drawn.
  *
  * Implementation note: we drive the animation from a single `useInView`
  * on the heading container and toggle the child lines with the `animate`
  * prop, rather than a per-line `whileInView`. This resolves the percentage
- * transform reliably — including for headings already in view at mount
- * (the hero) — where a per-element `whileInView` can fail to fire.
+ * transform reliably - including for headings already in view at mount
+ * (the hero) - where a per-element `whileInView` can fail to fire.
  */
 const EASE = [0.22, 1, 0.36, 1] as const;
 

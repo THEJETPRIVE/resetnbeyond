@@ -4,13 +4,13 @@ import { TextReveal } from "@/components/motion/TextReveal";
 import { Accordion, type QA } from "@/components/ui/Accordion";
 
 /**
- * HomeFaq — the questions a serious guest actually has, answered plainly.
+ * HomeFaq - the questions a serious guest actually has, answered plainly.
  * Heading held to the left, the accordion given room on the right.
  */
 const faqs: QA[] = [
   {
     q: "Is Reset & Beyond a booking website?",
-    a: "No. We are a private advisory. We do not own the houses we recommend, and we are not a reservation engine. We understand these clinics intimately and match a person to the right programme — then arrange every detail on their behalf.",
+    a: "No. We are a private advisory. We do not own the houses we recommend, and we are not a reservation engine. We understand these clinics intimately and match a person to the right programme - then arrange every detail on their behalf.",
   },
   {
     q: "How does membership work?",
@@ -38,7 +38,7 @@ export function HomeFaq() {
           <Reveal>
             <Eyebrow>Enquiries</Eyebrow>
           </Reveal>
-          <TextReveal as="h2" lines={["Questions,", "answered plainly."]} className="mt-8 text-display-md font-light" />
+          <TextReveal as="h2" lines={["Questions,", "answered plainly."]} className="mt-8 text-display-md font-normal" />
           <Reveal delay={0.1}>
             <p className="prose-luxe mt-8">
               And anything else, in conversation. Your advisor is a message away.

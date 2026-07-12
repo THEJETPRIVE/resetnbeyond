@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/motion/Reveal";
 
 /**
- * Section — the unit of vertical rhythm. Every section breathes with the
+ * Section - the unit of vertical rhythm. Every section breathes with the
  * same generous cadence so the whole site feels of one considered hand.
  */
 export function Section({
@@ -40,7 +40,7 @@ export function Eyebrow({
   tick?: boolean;
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-3 overline", className)}>
+    <span className={cn("inline-flex items-center gap-3 eyebrow", className)}>
       {tick && <span className="rule-gold" aria-hidden />}
       {children}
     </span>
@@ -48,7 +48,7 @@ export function Eyebrow({
 }
 
 /**
- * SectionHeader — the recurring "eyebrow + serif heading + lede" cluster.
+ * SectionHeader - the recurring "eyebrow + serif heading + lede" cluster.
  * Consistent structure, so composition stays effortless across pages.
  */
 export function SectionHeader({

@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
 
 /**
- * CTASection — a quiet, reusable invitation for the foot of interior
+ * CTASection - a quiet, reusable invitation for the foot of interior
  * pages. Charcoal ground, one serif line, one act. Distinct from the
  * homepage's cinematic close, but of the same family.
  */
@@ -26,9 +26,9 @@ export function CTASection({
     <Section tone="ink" className="grain overflow-hidden text-center">
       <div className="container relative z-[2] mx-auto max-w-3xl">
         <Reveal>
-          <span className="overline text-ivory/50">{eyebrow}</span>
+          <span className="eyebrow text-ivory/50">{eyebrow}</span>
         </Reveal>
-        <TextReveal as="h2" lines={lines} className="mt-8 text-display-md font-light text-ivory" />
+        <TextReveal as="h2" lines={lines} className="mt-8 text-display-md font-normal text-ivory" />
         {body && (
           <Reveal delay={0.15}>
             <p className="mx-auto mt-8 max-w-xl text-ivory/65">{body}</p>

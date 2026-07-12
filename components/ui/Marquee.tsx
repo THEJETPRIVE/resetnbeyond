@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Marquee — a slow, endless horizontal drift. Used for the register of
+ * Marquee - a slow, endless horizontal drift. Used for the register of
  * houses and provenance. Pure CSS (see `animate-marquee`), duplicated
  * once for a seamless loop, paused on hover for the curious reader.
  */
@@ -18,7 +18,7 @@ export function Marquee({
     <div className="flex shrink-0 items-center gap-16 pr-16" aria-hidden={ariaHidden}>
       {items.map((item, i) => (
         <div key={i} className="flex items-center gap-16">
-          <span className="whitespace-nowrap font-serif text-2xl font-light text-foreground/70 md:text-3xl">
+          <span className="whitespace-nowrap font-serif text-2xl font-normal text-foreground/70 md:text-3xl">
             {item}
           </span>
           <span className="text-gold/60" aria-hidden>

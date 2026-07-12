@@ -1,14 +1,17 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 
 /**
- * Display serif — Cormorant Garamond.
- * High-contrast, thin, and quietly aristocratic. Loaded across the
- * lighter weights only; luxury type is never bold.
+ * Display serif — Boska (Fontshare).
+ * A high-contrast, characterful display serif used across every heading.
+ * Loaded from the self-hosted variable woff2 (weights 200–900, upright +
+ * italic) via next/font/local — fast, no layout shift, no external request.
  */
-export const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
+export const display = localFont({
+  src: [
+    { path: "../fonts/Boska-Variable.woff2", weight: "200 900", style: "normal" },
+    { path: "../fonts/Boska-VariableItalic.woff2", weight: "200 900", style: "italic" },
+  ],
   variable: "--font-display",
   display: "swap",
 });

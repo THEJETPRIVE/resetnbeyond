@@ -4,7 +4,7 @@ import { EditorialImage } from "@/components/media/EditorialImage";
 import { cn } from "@/lib/utils";
 
 /**
- * ArticleCard — a journal entry as a magazine opening. Two sizes: a
+ * ArticleCard - a journal entry as a magazine opening. Two sizes: a
  * `feature` lead and a compact `row` for the secondary stack.
  */
 export function ArticleCard({
@@ -19,12 +19,12 @@ export function ArticleCard({
   if (variant === "row") {
     return (
       <Link href={`/journal/${article.slug}`} className={cn("group flex flex-col gap-4 border-t border-line py-8", className)}>
-        <div className="flex items-center gap-4 overline text-muted">
+        <div className="flex items-center gap-4 eyebrow text-muted">
           <span>{article.category}</span>
           <span className="h-px w-6 bg-line" />
           <span>{article.readTime}</span>
         </div>
-        <h3 className="font-serif text-2xl font-light text-foreground transition-colors group-hover:text-sage-deep dark:group-hover:text-sage md:text-3xl">
+        <h3 className="font-serif text-2xl font-normal text-foreground transition-colors group-hover:text-sage-deep dark:group-hover:text-sage md:text-3xl">
           {article.title}
         </h3>
         <p className="max-w-xl text-sm leading-relaxed text-muted">{article.standfirst}</p>
@@ -46,12 +46,12 @@ export function ArticleCard({
           />
         </div>
       </div>
-      <div className="mt-7 flex items-center gap-4 overline text-muted">
+      <div className="mt-7 flex items-center gap-4 eyebrow text-muted">
         <span>{article.category}</span>
         <span className="h-px w-6 bg-line" />
         <span>{article.readTime}</span>
       </div>
-      <h3 className="mt-5 max-w-2xl font-serif text-3xl font-light text-foreground transition-colors group-hover:text-sage-deep dark:group-hover:text-sage md:text-4xl">
+      <h3 className="mt-5 max-w-2xl font-serif text-3xl font-normal text-foreground transition-colors group-hover:text-sage-deep dark:group-hover:text-sage md:text-4xl">
         {article.title}
       </h3>
       <p className="mt-4 max-w-xl leading-relaxed text-muted">{article.standfirst}</p>

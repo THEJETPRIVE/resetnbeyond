@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 
 /**
- * Magnetic — an element that leans, gently, toward the cursor.
+ * Magnetic - an element that leans, gently, toward the cursor.
  * The effect is deliberately small (a few pixels). Used only on the
  * primary CTAs, never everywhere. Disabled under reduced-motion and
  * on touch, where there is no cursor to court.

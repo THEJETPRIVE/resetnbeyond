@@ -8,14 +8,14 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
 
 /**
- * Hero — the arrival.
+ * Hero - the arrival.
  *
  * A full-bleed cinematic still under a warm charcoal wash, a two-line
  * serif proclamation drawn up from behind a mask, and two quiet calls to
  * act. The whole plate drifts and fades as the guest begins to scroll,
  * so leaving the hero feels like stepping through a doorway.
  *
- * ART DIRECTION — replace the toned placeholder with a slow cinemagraph
+ * ART DIRECTION - replace the toned placeholder with a slow cinemagraph
  * or 4–6s silent loop (mist moving through a Himalayan forest at dawn).
  * See ASSETS.md for the AI prompt and stock keywords.
  */
@@ -38,7 +38,7 @@ export function Hero() {
           priority
           sizes="100vw"
         />
-        {/* Legibility washes — cinematic and text-aware. A gentle overall
+        {/* Legibility washes - cinematic and text-aware. A gentle overall
             darken, a stronger wash from the left (where the headline sits)
             and from the base (sub-copy + scroll cue), leaving the upper-
             right of the photograph open to breathe. */}
@@ -63,9 +63,8 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="mb-8 flex items-center gap-4 overline text-ivory/70"
+            className="mb-8 eyebrow text-ivory/70"
           >
-            <span className="h-px w-12 bg-gold/70" />
             By Invitation · Private Wellness Advisory
           </motion.p>
 
@@ -73,7 +72,7 @@ export function Hero() {
             as="h1"
             lines={["Beyond Wellness.", "Beyond Luxury."]}
             delay={0.35}
-            className="max-w-5xl text-display-xl font-light text-ivory"
+            className="max-w-5xl text-display-xl font-normal text-ivory"
           />
 
           <motion.p
@@ -82,7 +81,7 @@ export function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.9 }}
             className="mt-10 max-w-xl text-lg leading-relaxed text-ivory/75"
           >
-            An invitation-only concierge for the world's most discerning few — curating, comparing and reserving the
+            An invitation-only concierge for the world's most discerning few - curating, comparing and reserving the
             finest transformational retreats on earth.
           </motion.p>
 
@@ -112,7 +111,7 @@ export function Hero() {
         style={{ opacity }}
         className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3"
       >
-        <span className="overline text-ivory/50">Scroll</span>
+        <span className="eyebrow text-ivory/50">Scroll</span>
         <span className="relative h-12 w-px overflow-hidden bg-ivory/20">
           <motion.span
             className="absolute inset-x-0 top-0 h-4 bg-ivory/80"

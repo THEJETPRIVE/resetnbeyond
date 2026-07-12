@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { programs } from "@/data/programs";
 
 /**
- * FeaturedPrograms — the disciplines as an editorial index. A guest
+ * FeaturedPrograms - the disciplines as an editorial index. A guest
  * rarely arrives asking for a resort; they arrive with a question. This
  * section answers in the language of the question, not the destination.
  */

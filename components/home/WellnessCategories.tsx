@@ -4,7 +4,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
 
 /**
- * WellnessCategories — "what brings you here?" The guest's concern in
+ * WellnessCategories - "what brings you here?" The guest's concern in
  * their own words, each routing quietly to the discipline that answers
  * it. A large serif keyword field, not a grid of icon cards.
  */
@@ -37,12 +37,12 @@ export function WellnessCategories() {
           <TextReveal
             as="h2"
             lines={["What brings you here?"]}
-            className="mt-8 text-display-md font-light"
+            className="mt-8 text-display-md font-normal"
             lineClassName="text-foreground"
           />
           <Reveal delay={0.1}>
             <p className="prose-luxe mx-auto mt-8 text-center">
-              Tell us the concern in your own words. We will translate it into the discipline — and the house — that
+              Tell us the concern in your own words. We will translate it into the discipline - and the house - that
               answers it best.
             </p>
           </Reveal>
@@ -53,7 +53,7 @@ export function WellnessCategories() {
             <StaggerItem key={c.label}>
               <Link
                 href={c.href}
-                className="group inline-flex items-center gap-3 font-serif text-2xl font-light text-foreground/55 transition-colors duration-500 hover:text-foreground md:text-4xl"
+                className="group inline-flex items-center gap-3 font-serif text-2xl font-normal text-foreground/55 transition-colors duration-500 hover:text-foreground md:text-4xl"
               >
                 {c.label}
                 <span className="text-base text-gold/40 transition-colors group-hover:text-gold" aria-hidden>

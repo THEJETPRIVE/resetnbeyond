@@ -9,11 +9,11 @@ import { programs } from "@/data/programs";
 export const metadata: Metadata = {
   title: "Programs",
   description:
-    "Longevity, detox, executive reset, sleep, women's health, biohacking, nutrition, preventive and medical wellness — the disciplines we curate for, and the houses that master each.",
+    "Longevity, detox, executive reset, sleep, women's health, biohacking, nutrition, preventive and medical wellness - the disciplines we curate for, and the houses that master each.",
 };
 
 /**
- * PROGRAMS INDEX — the disciplines, as an editorial index. A guest arrives
+ * PROGRAMS INDEX - the disciplines, as an editorial index. A guest arrives
  * with a question; this is the page that speaks its language.
  */
 export default function ProgramsPage() {
@@ -47,7 +47,7 @@ export default function ProgramsPage() {
 
       <CTASection
         lines={["Not sure which", "discipline you need?"]}
-        body="Most guests arrive with a feeling rather than a diagnosis. A short conversation is often all it takes to name it — and to know where to go."
+        body="Most guests arrive with a feeling rather than a diagnosis. A short conversation is often all it takes to name it - and to know where to go."
         cta="Speak With an Advisor"
       />
     </>

@@ -1,5 +1,5 @@
 /**
- * RESORTS — the curated collection.
+ * RESORTS - the curated collection.
  *
  * Reset & Beyond does not own these houses; it curates them. Every word
  * here is written fresh in an editorial register (Monocle / Kinfolk),
@@ -63,7 +63,7 @@ export const resorts: Resort[] = [
     region: "Dehradun, Himalayan Foothills",
     coordinates: [30.3165, 78.0322],
     established: "2014",
-    tagline: "A retreat in the classical sense — a place to withdraw.",
+    tagline: "A retreat in the classical sense - a place to withdraw.",
     cardline: "Ancient Indian sciences, held within Sal forest silence.",
     categories: ["detox", "sleep", "preventive-health", "nutrition"],
     hero: {
@@ -74,19 +74,19 @@ export const resorts: Resort[] = [
       keywords: "himalayan forest mist dawn wellness sanctuary meditation",
     },
     overview: [
-      "Vana is not a spa and never pretends to be. It is a retreat in the oldest meaning of the word — a considered withdrawal from the noise of an examined life. Set within an ancient Sal forest above Dehradun, it gathers Ayurveda, Tibetan medicine, Yoga and natural healing under a single, unhurried roof.",
-      "Guests arrive with intention and leave on a rhythm. There are no televisions in the rooms, no rush in the corridors, and no menu of indulgences — only a curated path, drawn with a physician, that asks something of you and gives more in return.",
+      "Vana is not a spa and never pretends to be. It is a retreat in the oldest meaning of the word - a considered withdrawal from the noise of an examined life. Set within an ancient Sal forest above Dehradun, it gathers Ayurveda, Tibetan medicine, Yoga and natural healing under a single, unhurried roof.",
+      "Guests arrive with intention and leave on a rhythm. There are no televisions in the rooms, no rush in the corridors, and no menu of indulgences - only a curated path, drawn with a physician, that asks something of you and gives more in return.",
     ],
     location:
-      "Ninety minutes by helicopter from Delhi, then a gentle ascent into the Doon Valley. The estate sits at the meeting point of the Ganges plains and the first Himalayan ridgelines — thin air, long views, and the particular quiet that only forests keep.",
+      "Ninety minutes by helicopter from Delhi, then a gentle ascent into the Doon Valley. The estate sits at the meeting point of the Ganges plains and the first Himalayan ridgelines - thin air, long views, and the particular quiet that only forests keep.",
     whoFor:
-      "For those who have optimised everything except stillness. Founders and principals between quarters; individuals recovering their sleep, their digestion, or their sense of proportion. Vana rewards commitment — it is chosen by people ready to be led.",
+      "For those who have optimised everything except stillness. Founders and principals between quarters; individuals recovering their sleep, their digestion, or their sense of proportion. Vana rewards commitment - it is chosen by people ready to be led.",
     philosophy:
       "Healing as return, not repair. Vana treats the guest as a whole system, restoring the body's own intelligence through disciplines that predate the wellness industry by several thousand years.",
     signaturePrograms: [
       { name: "Ayurveda Panchakarma", duration: "7–21 nights", summary: "A physician-led purification and rebuilding of the body's core, sequenced across weeks, not days." },
       { name: "Sleep & Circadian Restoration", duration: "7–14 nights", summary: "Chronobiology, Yoga Nidra and Tibetan therapies to rebuild the architecture of deep sleep." },
-      { name: "Vana Reset", duration: "5–7 nights", summary: "An introductory recalibration for the time-poor — the essential Vana, distilled." },
+      { name: "Vana Reset", duration: "5–7 nights", summary: "An introductory recalibration for the time-poor - the essential Vana, distilled." },
     ],
     medicalExpertise: [
       "Resident Ayurvedic physicians (Vaidyas) and Tibetan doctors (Amchi)",
@@ -95,9 +95,9 @@ export const resorts: Resort[] = [
       "Nutrition rooted in Ayurvedic constitution (dosha) assessment",
     ],
     accommodation:
-      "Rooms and suites face either the Sal forest or the estate's meditation courtyards. Interiors are quiet to the point of monastic — natural linen, hand-thrown ceramics, no visual noise. The wardrobe is a kurta pyjama; the dress code is ease.",
+      "Rooms and suites face either the Sal forest or the estate's meditation courtyards. Interiors are quiet to the point of monastic - natural linen, hand-thrown ceramics, no visual noise. The wardrobe is a kurta pyjama; the dress code is ease.",
     cuisine:
-      "A single, seasonal kitchen cooks to your programme, not your cravings. Plant-forward, largely from the estate, occasionally austere — and, within its discipline, quietly delicious.",
+      "A single, seasonal kitchen cooks to your programme, not your cravings. Plant-forward, largely from the estate, occasionally austere - and, within its discipline, quietly delicious.",
     gallery: [
       { tone: "vana-a", alt: "Forest meditation courtyard", aiPrompt: "Minimal open-air meditation courtyard, ivory stone, morning mist, single figure in white seated in stillness, editorial", keywords: "meditation courtyard minimal stone mist" },
       { tone: "vana-b", alt: "Ayurvedic therapy room", aiPrompt: "Warm-lit Ayurvedic treatment room, wooden Panchakarma table, brass vessels, oil lamps, soft shadows, luxury", keywords: "ayurveda treatment room brass oil warm" },
@@ -136,18 +136,18 @@ export const resorts: Resort[] = [
       keywords: "lake lucerne alps dawn modern architecture calm",
     },
     overview: [
-      "Chenot Palace Weggis is the definitive expression of the Chenot Method — a fusion of detoxification, energetic medicine and advanced diagnostics that has quietly guided the world's most examined bodies for four decades.",
+      "Chenot Palace Weggis is the definitive expression of the Chenot Method - a fusion of detoxification, energetic medicine and advanced diagnostics that has quietly guided the world's most examined bodies for four decades.",
       "Here, prevention is not a philosophy but a protocol. Each stay opens with a comprehensive health assessment and closes with a measurable delta: sleep, metabolism, biological age. The lake does the rest.",
     ],
     location:
-      "On the Weggis shoreline of Lake Lucerne, forty minutes from Zurich. A landscape of water, cloud and mountain that has drawn convalescents and thinkers for two centuries — Mark Twain among them.",
+      "On the Weggis shoreline of Lake Lucerne, forty minutes from Zurich. A landscape of water, cloud and mountain that has drawn convalescents and thinkers for two centuries - Mark Twain among them.",
     whoFor:
       "For the diagnostically curious. Executives who measure everything and wish to measure the things that matter. Those managing stress load, metabolic drift or the early questions of longevity, who want answers rendered in data rather than reassurance.",
     philosophy:
       "The body accumulates; the method releases. Chenot combines deep detoxification with precision diagnostics so that prevention becomes something you can see on a chart, not merely feel.",
     signaturePrograms: [
       { name: "Advanced Detox Programme", duration: "7 nights", summary: "The flagship. Hydro-aromatherapy, phytotherapy and energetic treatments sequenced against daily biomarkers." },
-      { name: "Recover & Energise", duration: "5–7 nights", summary: "For depleted nervous systems — a rebuild of energy, sleep and stress resilience." },
+      { name: "Recover & Energise", duration: "5–7 nights", summary: "For depleted nervous systems - a rebuild of energy, sleep and stress resilience." },
       { name: "Longevity & Prevention", duration: "7 nights", summary: "Comprehensive screening, biological-age assessment and a forward protocol to take home." },
     ],
     medicalExpertise: [
@@ -157,9 +157,9 @@ export const resorts: Resort[] = [
       "Chenot hydro-aromatherapy and phyto-mud treatments",
     ],
     accommodation:
-      "Rooms and suites face the lake or the alpine gardens, finished in a restrained palette of pale oak, stone and glass. The design vocabulary is clinical only in its precision — everywhere else it is warm, still and Swiss.",
+      "Rooms and suites face the lake or the alpine gardens, finished in a restrained palette of pale oak, stone and glass. The design vocabulary is clinical only in its precision - everywhere else it is warm, still and Swiss.",
     cuisine:
-      "The Chenot diet is calorically precise and nutritionally complete — a controlled, plant-led cuisine engineered to support detoxification without ever feeling like deprivation. Presentation is worthy of any Michelin room.",
+      "The Chenot diet is calorically precise and nutritionally complete - a controlled, plant-led cuisine engineered to support detoxification without ever feeling like deprivation. Presentation is worthy of any Michelin room.",
     gallery: [
       { tone: "chenot-a", alt: "Indoor thermal pool facing the lake", aiPrompt: "Minimalist indoor thermal pool, floor-to-ceiling glass onto Lake Lucerne, still water, pale stone, cool serene light", keywords: "indoor thermal pool glass lake minimal" },
       { tone: "chenot-b", alt: "Diagnostic suite", aiPrompt: "Clean modern medical diagnostic suite, warm minimal design, soft daylight, sense of precision and calm, no clutter", keywords: "modern medical diagnostic minimal calm" },
@@ -174,7 +174,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Seven-night programmes from approximately CHF 8,500 per person including accommodation, all treatments, diagnostics and cuisine. Private transfer from Zurich arranged on request.",
     faq: [
-      { q: "Is Chenot a medical facility?", a: "It is a medical wellness clinic — a rare hybrid of five-star hospitality and genuine clinical diagnostics, staffed by physicians and equipped accordingly." },
+      { q: "Is Chenot a medical facility?", a: "It is a medical wellness clinic - a rare hybrid of five-star hospitality and genuine clinical diagnostics, staffed by physicians and equipped accordingly." },
       { q: "How quickly will I see results?", a: "Most guests leave a seven-night stay with measurable improvements in sleep, energy and select biomarkers, alongside a protocol to sustain them." },
     ],
     related: ["clinique-la-prairie", "lanserhof-lans", "sha-wellness-spain"],
@@ -188,7 +188,7 @@ export const resorts: Resort[] = [
     coordinates: [46.4312, 6.9107],
     established: "1931",
     tagline: "Ninety years of longevity science, above Lake Geneva.",
-    cardline: "The original longevity clinic — medicine, refined into ritual.",
+    cardline: "The original longevity clinic - medicine, refined into ritual.",
     categories: ["longevity", "medical-wellness", "preventive-health", "healthy-aging"],
     hero: {
       tone: "laprairie",
@@ -198,17 +198,17 @@ export const resorts: Resort[] = [
       keywords: "lake geneva montreux alps clinic vineyard light",
     },
     overview: [
-      "Founded in 1931, Clinique La Prairie is where the modern science of longevity began. Its pioneering cellular therapy drew heads of state and screen legends long before 'wellness' entered the lexicon — and its research continues to define the field.",
+      "Founded in 1931, Clinique La Prairie is where the modern science of longevity began. Its pioneering cellular therapy drew heads of state and screen legends long before 'wellness' entered the lexicon - and its research continues to define the field.",
       "Today it operates as a medical clinic, a wellness sanctuary and a hotel of genuine distinction, holding all three in a single, seamless standard. Prevention here is a nine-decade discipline, not a trend.",
     ],
     location:
       "Perched above Montreux with Lake Geneva below and the Alps beyond, amid the terraced vineyards of the Lavaux. Twenty minutes from Montreux, an hour from Geneva.",
     whoFor:
-      "For those investing in decades, not weeks. Individuals and couples pursuing healthy longevity, immune resilience and the science of ageing well — who expect their wellness to be underwritten by real medicine.",
+      "For those investing in decades, not weeks. Individuals and couples pursuing healthy longevity, immune resilience and the science of ageing well - who expect their wellness to be underwritten by real medicine.",
     philosophy:
-      "Longevity is built, cell by cell. La Prairie's four pillars — medical, nutrition, movement and wellbeing — are sequenced by physicians into a single revitalising arc.",
+      "Longevity is built, cell by cell. La Prairie's four pillars - medical, nutrition, movement and wellbeing - are sequenced by physicians into a single revitalising arc.",
     signaturePrograms: [
-      { name: "Revitalisation", duration: "7 nights", summary: "The legendary flagship — cellular therapy and comprehensive medical assessment to restore vitality at the source." },
+      { name: "Revitalisation", duration: "7 nights", summary: "The legendary flagship - cellular therapy and comprehensive medical assessment to restore vitality at the source." },
       { name: "Longevity", duration: "7 nights", summary: "A forward-looking programme of screening, epigenetic insight and a personalised protocol for the years ahead." },
       { name: "Master Detox", duration: "7 nights", summary: "A medically supervised cleanse to reset metabolism, digestion and energy." },
     ],
@@ -219,7 +219,7 @@ export const resorts: Resort[] = [
       "Genetic screening and preventive cardiology",
     ],
     accommodation:
-      "Suites in the historic and contemporary wings alike face the lake, appointed with the quiet grandeur of a grand Swiss hotel — because that, in part, is what it is.",
+      "Suites in the historic and contemporary wings alike face the lake, appointed with the quiet grandeur of a grand Swiss hotel - because that, in part, is what it is.",
     cuisine:
       "A nutrition philosophy translated by chefs into cuisine you would order for pleasure. Longevity-led, lake-fresh, and served with the ceremony of fine dining.",
     gallery: [
@@ -236,7 +236,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Seven-night signature programmes from approximately CHF 30,000 per person, all-inclusive of medical, accommodation and cuisine. Bespoke longevity protocols quoted individually.",
     faq: [
-      { q: "What is cellular therapy?", a: "The revitalisation science La Prairie pioneered — a proprietary approach to restoring cellular vitality, refined across ninety years of clinical practice and research." },
+      { q: "What is cellular therapy?", a: "The revitalisation science La Prairie pioneered - a proprietary approach to restoring cellular vitality, refined across ninety years of clinical practice and research." },
       { q: "Is it suitable for couples?", a: "Entirely. Many guests attend as couples, each following an individually prescribed programme within a shared stay." },
     ],
     related: ["chenot-palace-weggis", "lanserhof-lans", "sha-wellness-spain"],
@@ -260,7 +260,7 @@ export const resorts: Resort[] = [
       keywords: "maldives private island aerial turquoise lagoon overwater",
     },
     overview: [
-      "JOALI BEING is the Maldives reimagined as a place of transformation rather than escape. The archipelago's first wellbeing island organises the whole of Bodufushi around four pillars — Mind, Skin, Microbiome and Energy — into a single immersive journey.",
+      "JOALI BEING is the Maldives reimagined as a place of transformation rather than escape. The archipelago's first wellbeing island organises the whole of Bodufushi around four pillars - Mind, Skin, Microbiome and Energy - into a single immersive journey.",
       "Nature is the medium. Treatments unfold in overwater pavilions and forest clearings; the ocean is both diagnostic and remedy. It is wellness on the scale of a landscape.",
     ],
     location:
@@ -283,7 +283,7 @@ export const resorts: Resort[] = [
     accommodation:
       "Beach and overwater villas of considerable scale, each with private pool, crafted in natural timber and stone. Architecture that frames the ocean rather than competing with it.",
     cuisine:
-      "'Anti-inflammatory gastronomy' — cuisine built around the microbiome and served with genuine culinary ambition across earth-to-table venues. Nutrition you would choose for taste alone.",
+      "'Anti-inflammatory gastronomy' - cuisine built around the microbiome and served with genuine culinary ambition across earth-to-table venues. Nutrition you would choose for taste alone.",
     gallery: [
       { tone: "joali-a", alt: "Overwater treatment pavilion", aiPrompt: "Overwater wellness pavilion above a Maldivian lagoon, natural timber, gauze curtains, turquoise water below, serene", keywords: "overwater pavilion maldives spa timber lagoon" },
       { tone: "joali-b", alt: "Hydrotherapy hall", aiPrompt: "Elegant hydrotherapy hall, vitality pools, natural materials, soft daylight, tranquil luxury wellness", keywords: "hydrotherapy pool wellness natural light luxury" },
@@ -298,7 +298,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Villa residencies with wellbeing programmes from approximately US$2,500 per night, minimum seven nights. Seaplane transfer from Malé arranged privately.",
     faq: [
-      { q: "Is this a clinic or a resort?", a: "It is a wellbeing island — the diagnostic rigour of a clinic set within the beauty and freedom of a private-island resort." },
+      { q: "Is this a clinic or a resort?", a: "It is a wellbeing island - the diagnostic rigour of a clinic set within the beauty and freedom of a private-island resort." },
       { q: "Can programmes be tailored for couples?", a: "Yes. Each guest is individually assessed, and couples frequently pursue complementary journeys side by side." },
     ],
     related: ["chiva-som", "six-senses-vana", "sha-wellness-mexico"],
@@ -322,7 +322,7 @@ export const resorts: Resort[] = [
       keywords: "mediterranean white clinic hillside sea alicante architecture",
     },
     overview: [
-      "SHA pioneered the marriage of ancient Eastern disciplines with the most advanced Western medicine — a genuinely integrative model that has since been widely imitated and rarely matched.",
+      "SHA pioneered the marriage of ancient Eastern disciplines with the most advanced Western medicine - a genuinely integrative model that has since been widely imitated and rarely matched.",
       "From its terraced white campus above the Sierra Helada, SHA delivers longevity, detox and metabolic programmes with clinical seriousness, then wraps them in the light and ease of the Mediterranean.",
     ],
     location:
@@ -345,7 +345,7 @@ export const resorts: Resort[] = [
     accommodation:
       "Bright, contemporary suites in luminous white and warm wood, each with a terrace to the sea or the mountains. Southern light is the defining material.",
     cuisine:
-      "SHA is where macrobiotic cuisine became genuinely desirable — two menus, one therapeutic and one gastronomic, both grounded in the same nutritional science.",
+      "SHA is where macrobiotic cuisine became genuinely desirable - two menus, one therapeutic and one gastronomic, both grounded in the same nutritional science.",
     gallery: [
       { tone: "sha-es-a", alt: "Sea-view suite terrace", aiPrompt: "Bright white Mediterranean suite terrace overlooking the sea, warm wood, southern light, contemporary luxury", keywords: "white suite terrace sea mediterranean light" },
       { tone: "sha-es-b", alt: "Macrobiotic tasting plate", aiPrompt: "Beautiful macrobiotic tasting plate, colourful vegetables, fine ceramic, natural light, health-forward gastronomy", keywords: "macrobiotic cuisine plating colourful healthy" },
@@ -360,7 +360,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Seven-night programmes from approximately €6,500 per person including accommodation, medical consultations and cuisine. Suites and villas quoted by category.",
     faq: [
-      { q: "What makes SHA integrative?", a: "It combines evidence-based Western diagnostics with Eastern disciplines and macrobiotic nutrition under one medical roof — not as alternatives, but as a single method." },
+      { q: "What makes SHA integrative?", a: "It combines evidence-based Western diagnostics with Eastern disciplines and macrobiotic nutrition under one medical roof - not as alternatives, but as a single method." },
       { q: "Is macrobiotic food restrictive?", a: "SHA offers both a therapeutic and a gastronomic menu, so nutritional discipline and genuine pleasure at the table are never in conflict." },
     ],
     related: ["sha-wellness-mexico", "clinique-la-prairie", "chenot-palace-weggis"],
@@ -390,7 +390,7 @@ export const resorts: Resort[] = [
     location:
       "On the coast south of Cancún, between the Sian Ka'an biosphere and the sea. Under an hour from Cancún International; a world away in atmosphere.",
     whoFor:
-      "For clients in the Americas seeking SHA's proven method closer to home — and for anyone who wishes their longevity programme to come with warm water and jungle air.",
+      "For clients in the Americas seeking SHA's proven method closer to home - and for anyone who wishes their longevity programme to come with warm water and jungle air.",
     philosophy:
       "Place amplifies medicine. The same integrative rigour, now infused with the restorative energy of one of the planet's most biodiverse coastlines.",
     signaturePrograms: [
@@ -407,7 +407,7 @@ export const resorts: Resort[] = [
     accommodation:
       "Sculptural suites open to jungle or sea, in a palette of warm limestone, pale wood and linen. Indoor and outdoor dissolve into one another.",
     cuisine:
-      "SHA's celebrated macrobiotic gastronomy, reinterpreted with the produce and spirit of the Yucatán — therapeutic precision meeting Latin warmth.",
+      "SHA's celebrated macrobiotic gastronomy, reinterpreted with the produce and spirit of the Yucatán - therapeutic precision meeting Latin warmth.",
     gallery: [
       { tone: "sha-mx-a", alt: "Jungle-facing suite", aiPrompt: "Sculptural suite opening to Yucatán jungle, warm limestone and linen, dappled tropical light, serene luxury", keywords: "jungle suite limestone linen tropical light" },
       { tone: "sha-mx-b", alt: "Cenote wellness ritual", aiPrompt: "Serene cenote wellness ritual, turquoise water in limestone cavern, soft light shaft, meditative luxury", keywords: "cenote wellness ritual turquoise limestone" },
@@ -446,17 +446,17 @@ export const resorts: Resort[] = [
       keywords: "tyrol alps modern clinic plateau mountains crisp light",
     },
     overview: [
-      "Lanserhof is the standard-bearer of Modern Mayr Medicine — a rigorous, physician-led approach that begins where much of health quietly ends: the gut. Digestion, it holds, is the foundation of energy, immunity and clarity.",
+      "Lanserhof is the standard-bearer of Modern Mayr Medicine - a rigorous, physician-led approach that begins where much of health quietly ends: the gut. Digestion, it holds, is the foundation of energy, immunity and clarity.",
       "The regime is honest and, at first, demanding. Chewing is retaught, the diet pared back, the body's systems recalibrated under close medical supervision. Guests leave lighter in every sense.",
     ],
     location:
       "On the sunny Lans plateau above Innsbruck, at the threshold of the Tyrolean Alps. Fifteen minutes from Innsbruck; a clean, high, restorative air throughout.",
     whoFor:
-      "For the committed. High performers carrying digestive strain, inflammation, poor sleep or executive fatigue, who want a genuine medical reset rather than a soft spa week — and are willing to earn it.",
+      "For the committed. High performers carrying digestive strain, inflammation, poor sleep or executive fatigue, who want a genuine medical reset rather than a soft spa week - and are willing to earn it.",
     philosophy:
       "Health begins in the gut. The Mayr method restores digestion first, trusting that energy, immunity and mental clarity follow from a well-ordered core.",
     signaturePrograms: [
-      { name: "Classic Cure", duration: "7–14 nights", summary: "The foundational Mayr programme — diagnostics, therapeutic fasting and gut restoration under daily medical care." },
+      { name: "Classic Cure", duration: "7–14 nights", summary: "The foundational Mayr programme - diagnostics, therapeutic fasting and gut restoration under daily medical care." },
       { name: "Energy Medicine", duration: "7–14 nights", summary: "Targeted at depletion and burnout, rebuilding cellular energy and resilience." },
       { name: "Executive Reset", duration: "7 nights", summary: "A concentrated recalibration for the time-constrained leader." },
     ],
@@ -467,7 +467,7 @@ export const resorts: Resort[] = [
       "Dental and postural units (the Lanserhof concept treats the whole)",
     ],
     accommodation:
-      "Rooms and suites of quiet Austrian modernism — pale timber, clean lines, generous glazing onto the peaks. Restraint as luxury.",
+      "Rooms and suites of quiet Austrian modernism - pale timber, clean lines, generous glazing onto the peaks. Restraint as luxury.",
     cuisine:
       "The Mayr diet is deliberately spare, then rebuilt with sophistication: alkaline, seasonal and, by the end of a cure, quietly revelatory. You relearn how to eat.",
     gallery: [
@@ -484,7 +484,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Seven-night cures from approximately €4,500 per person plus accommodation and medical services quoted individually. Innsbruck transfer arranged.",
     faq: [
-      { q: "Is the Mayr cure difficult?", a: "It asks something of you — particularly in diet and pace — but is fully physician-supervised and calibrated to your capacity. The rewards are proportionate to the commitment." },
+      { q: "Is the Mayr cure difficult?", a: "It asks something of you - particularly in diet and pace - but is fully physician-supervised and calibrated to your capacity. The rewards are proportionate to the commitment." },
       { q: "Who should not attend?", a: "Your concierge and the Lanserhof medical team will assess suitability in advance; the programme is intensive and medically directed." },
     ],
     related: ["chenot-palace-weggis", "clinique-la-prairie", "sha-wellness-spain"],
@@ -509,16 +509,16 @@ export const resorts: Resort[] = [
     },
     overview: [
       "Chiva-Som invented the destination wellness resort as we know it. For three decades this beachfront sanctuary in Hua Hin has quietly set the standard, blending Eastern and Western therapies with a warmth entirely its own.",
-      "The approach is holistic and personal — a health-and-wellness consultation shapes each stay across fitness, spa, nutrition, aesthetics and mind. Few places balance rigour and generosity so gracefully.",
+      "The approach is holistic and personal - a health-and-wellness consultation shapes each stay across fitness, spa, nutrition, aesthetics and mind. Few places balance rigour and generosity so gracefully.",
     ],
     location:
       "On the beach at Hua Hin, the royal Thai resort town on the Gulf of Thailand. A gentle three-hour drive or short flight from Bangkok, into a softer, slower register.",
     whoFor:
-      "For those seeking a complete, holistic reset delivered with Thai grace. Guests managing stress, sleep and executive fatigue who want breadth — fitness, spa, nutrition and mind — rather than a single clinical protocol.",
+      "For those seeking a complete, holistic reset delivered with Thai grace. Guests managing stress, sleep and executive fatigue who want breadth - fitness, spa, nutrition and mind - rather than a single clinical protocol.",
     philosophy:
       "The haven of life. Chiva-Som treats wellbeing as an ecosystem of body, mind and spirit, tended by a large multidisciplinary team with unusual patience.",
     signaturePrograms: [
-      { name: "Optimal Performance", duration: "7–10 nights", summary: "For the depleted high achiever — fitness, recovery and stress physiology brought back into balance." },
+      { name: "Optimal Performance", duration: "7–10 nights", summary: "For the depleted high achiever - fitness, recovery and stress physiology brought back into balance." },
       { name: "Cleanse & Detox", duration: "5–7 nights", summary: "A gentle yet thorough purification across nutrition, hydrotherapy and holistic spa." },
       { name: "Sleep Enhancement", duration: "7 nights", summary: "A dedicated programme to rebuild restorative sleep through therapy, nutrition and mind practices." },
     ],
@@ -531,7 +531,7 @@ export const resorts: Resort[] = [
     accommodation:
       "Thai-pavilion and ocean-view rooms set in mature tropical gardens, a short barefoot walk from the sea. Understated, garden-cooled, deeply calm.",
     cuisine:
-      "Cuisine that proves healthy eating need never be dull — balanced, flavourful, and drawn largely from the resort's own organic garden.",
+      "Cuisine that proves healthy eating need never be dull - balanced, flavourful, and drawn largely from the resort's own organic garden.",
     gallery: [
       { tone: "chivasom-a", alt: "Beachfront at dawn", aiPrompt: "Calm golden beach at dawn with tropical pavilions and palms, soft light, serene Thai wellness sanctuary, editorial", keywords: "thailand beach dawn pavilion palm calm" },
       { tone: "chivasom-b", alt: "Traditional Thai therapy", aiPrompt: "Serene traditional Thai massage pavilion, warm wood, gauze, soft light, holistic luxury spa", keywords: "thai massage pavilion wood serene spa" },
@@ -546,7 +546,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "Wellness residencies from approximately US$700 per night including accommodation, consultation, cuisine and daily treatments; minimum three nights.",
     faq: [
-      { q: "Is Chiva-Som medical or holistic?", a: "Primarily holistic, with genuine clinical depth in areas such as physiotherapy, naturopathy and nutrition — a broad, integrated approach rather than a single medical protocol." },
+      { q: "Is Chiva-Som medical or holistic?", a: "Primarily holistic, with genuine clinical depth in areas such as physiotherapy, naturopathy and nutrition - a broad, integrated approach rather than a single medical protocol." },
       { q: "How long should I stay?", a: "Most guests find seven to ten nights allows a programme to take real effect, though shorter resets are available." },
     ],
     related: ["six-senses-vana", "joali-being", "ananda-himalayas"],
@@ -571,7 +571,7 @@ export const resorts: Resort[] = [
     },
     overview: [
       "Ananda occupies a Maharaja's palace estate on a forested Himalayan ridge above Rishikesh, the birthplace of Yoga. Here, authentic Ayurveda, Yoga and Vedanta are practised with heritage-house grace and genuine spiritual depth.",
-      "Set against the Ganges valley, it holds a rare balance — the seriousness of a traditional healing tradition within the comfort of a grand palace hotel.",
+      "Set against the Ganges valley, it holds a rare balance - the seriousness of a traditional healing tradition within the comfort of a grand palace hotel.",
     ],
     location:
       "Above Rishikesh and the Ganges, in the Garhwal Himalayan foothills. An hour from Dehradun airport, ascending into forest, temple bells and thin, clear air.",
@@ -593,7 +593,7 @@ export const resorts: Resort[] = [
     accommodation:
       "Palace rooms, valley-view rooms and private villas across the heritage estate, blending Raj-era grandeur with serene contemporary calm.",
     cuisine:
-      "Ayurvedic cuisine tailored to your constitution and programme — subtle, restorative, and drawn from Himalayan produce, with fine-dining polish where the programme allows.",
+      "Ayurvedic cuisine tailored to your constitution and programme - subtle, restorative, and drawn from Himalayan produce, with fine-dining polish where the programme allows.",
     gallery: [
       { tone: "ananda-a", alt: "Palace courtyard", aiPrompt: "Heritage Indian palace courtyard at golden hour, Raj-era architecture, forest beyond, serene luxury wellness estate", keywords: "indian palace courtyard heritage golden hour" },
       { tone: "ananda-b", alt: "Ayurvedic therapy ritual", aiPrompt: "Warm Ayurvedic Shirodhara therapy, oil stream, brass vessel, candlelight, deeply serene luxury spa", keywords: "ayurveda shirodhara therapy brass candlelight" },
@@ -608,7 +608,7 @@ export const resorts: Resort[] = [
     pricingGuidance:
       "All-inclusive wellness residencies from approximately US$650 per night, minimum three nights; Ayurvedic programmes quoted on consultation.",
     faq: [
-      { q: "Is Ananda spiritual or medical?", a: "Both, in the Indian tradition — authentic Ayurvedic medicine practised alongside Yoga and Vedantic philosophy, within a grand heritage estate." },
+      { q: "Is Ananda spiritual or medical?", a: "Both, in the Indian tradition - authentic Ayurvedic medicine practised alongside Yoga and Vedantic philosophy, within a grand heritage estate." },
       { q: "Do I need Yoga experience?", a: "None at all. Practice is tailored to every level, from first breath to advanced, always under expert guidance." },
     ],
     related: ["six-senses-vana", "chiva-som", "joali-being"],
