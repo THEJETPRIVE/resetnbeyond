@@ -6,9 +6,9 @@
 export const site = {
   name: "Reset & Beyond",
   tagline: "Beyond Wellness. Beyond Luxury.",
-  email: "concierge@resetandbeyond.com",
-  phone: "+41 22 000 0000",
-  phoneHref: "tel:+41220000000",
+  email: "concierge@resetnbeyond.com",
+  phone: "+91 98 00000 147",
+  phoneHref: "tel:+919800000147",
   offices: ["Geneva", "London", "Singapore", "Dubai"],
 } as const;
 

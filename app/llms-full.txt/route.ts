@@ -81,7 +81,7 @@ ${a.body.join("\n\n")}`,
 > An invitation-only luxury wellness concierge. We curate, compare and privately reserve the world's best luxury wellness resorts and transformational retreats for ultra-high-net-worth individuals. We do not own these resorts; we advise on them independently. Membership is by introduction; a private advisor replies to every enquiry within one business day.
 
 Site: ${SITE_URL}
-Contact: concierge@resetandbeyond.com
+Contact: concierge@resetnbeyond.com
 
 ## The Collection - the best luxury wellness resorts in the world
 

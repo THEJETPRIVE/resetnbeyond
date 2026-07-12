@@ -17,7 +17,7 @@ export function JsonLd({ data }: { data: Record<string, unknown> }) {
   );
 }
 
-export const SITE_URL = "https://resetnbeyond.vercel.app";
+export const SITE_URL = "https://resetnbeyond.com";
 
 /** Organization - we are a travel/wellness advisory, not a resort owner */
 export const organizationSchema = {
@@ -29,7 +29,7 @@ export const organizationSchema = {
   slogan: "Beyond Wellness. Beyond Luxury.",
   description:
     "An invitation-only luxury wellness concierge that curates, compares and reserves the world's best luxury wellness resorts and transformational retreats for ultra-high-net-worth individuals.",
-  email: "concierge@resetandbeyond.com",
+  email: "concierge@resetnbeyond.com",
   areaServed: "Worldwide",
   knowsAbout: [
     "luxury wellness resorts",
