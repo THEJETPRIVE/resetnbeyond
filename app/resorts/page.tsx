@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { IndexHero } from "@/components/layout/PageHeroes";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ResortCard } from "@/components/cards/ResortCard";
@@ -15,20 +15,22 @@ export const metadata: Metadata = {
 /**
  * RESORTS INDEX - the collection.
  *
- * A deliberately small, editorially-paced grid. Two columns on a gentle
- * diagonal (alternate columns drop), so the page reads like a portfolio,
- * not a search result.
+ * Opens as an editorial index: display type beside a numbered register
+ * of all nine houses, like a table of contents. The grid below reads
+ * like a portfolio, not a search result.
  */
 export default function ResortsPage() {
   return (
     <>
-      <PageHero
+      <IndexHero
         eyebrow="The Collection"
         titleLines={["Nine houses.", "No compromises."]}
         standfirst="We curate a small collection rather than a large catalogue. Each house earns its place by doing one thing - longevity, detox, sleep, medical wellness - better than anywhere else on earth."
-        tone="collection-hero"
-        alt="A sweep of the world's finest wellness landscapes"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Collection", href: "/resorts" }]}
+        items={resorts.map((r) => ({
+          name: r.name,
+          note: r.country,
+          href: `/resorts/${r.slug}`,
+        }))}
       />
 
       <Section>

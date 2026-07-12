@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProgram, programSlugs, resortsForProgram } from "@/data/programs";
-import { PageHero } from "@/components/layout/PageHero";
+import { SplitHero } from "@/components/layout/PageHeroes";
 import { Section, SectionHeader, Eyebrow } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
@@ -31,18 +31,12 @@ export default function ProgramDetailPage({ params }: { params: { slug: string }
 
   return (
     <>
-      <PageHero
+      <SplitHero
         eyebrow={program.eyebrow}
-        titleLines={[program.name]}
+        title={program.name}
         standfirst={program.tagline}
         tone={program.image.tone}
-        src={program.image.src}
         alt={program.image.alt}
-        breadcrumb={[
-          { label: "Home", href: "/" },
-          { label: "Programs", href: "/programs" },
-          { label: program.name, href: `/programs/${program.slug}` },
-        ]}
       />
 
       {/* Intro */}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { OffsetHero } from "@/components/layout/PageHeroes";
 import { Section, SectionHeader, Eyebrow } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
@@ -34,13 +34,12 @@ const measures = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero
+      <OffsetHero
         eyebrow="The Advisory"
         titleLines={["A quiet hand", "behind great", "journeys."]}
         standfirst="Reset & Beyond exists for those who no longer compare prices, only experiences. We are the advisor between you and the finest wellness houses on earth."
         tone="about-hero"
         alt="A serene, considered interior in warm morning light"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
       />
 
       {/* Belief */}

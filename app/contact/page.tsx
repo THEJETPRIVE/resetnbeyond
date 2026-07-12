@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { MinimalHero } from "@/components/layout/PageHeroes";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal } from "@/components/motion/Reveal";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
@@ -18,14 +18,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero
+      <MinimalHero
         eyebrow="Contact"
-        titleLines={["Speak with us."]}
+        title="Speak with us."
         standfirst="By message, by telephone, or through one of our offices. However you prefer to begin, a private advisor is ready."
-        tone="contact-hero"
-        alt="A calm reception space in warm natural light"
-        height="short"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact", href: "/contact" }]}
       />
 
       <Section>

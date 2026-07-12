@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { InvitationHero } from "@/components/layout/PageHeroes";
 import { Section, SectionHeader, Eyebrow } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
@@ -26,13 +26,10 @@ const expect = [
 export default function ConciergePage() {
   return (
     <>
-      <PageHero
+      <InvitationHero
         eyebrow="By Invitation"
         titleLines={["Begin the", "conversation."]}
         standfirst="Share a little of what you seek. A private advisor will design a journey around your health, your calendar and your taste - discreetly, and without obligation."
-        tone="concierge-hero"
-        alt="A quiet desk set for a private conversation at dawn"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Concierge", href: "/concierge" }]}
       />
 
       {/* What to expect */}

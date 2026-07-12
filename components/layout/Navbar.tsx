@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -12,17 +13,23 @@ import { cn } from "@/lib/utils";
 /**
  * Navbar - the threshold.
  *
- * Every page opens on a dark hero band, so at the top the bar is
- * transparent with ivory type. After a short scroll it condenses into a
- * blurred ivory rail with charcoal type and a hairline base. Flyouts
- * reveal the collection and the disciplines; a theme toggle offers the
- * nocturne. On small screens the whole thing becomes a calm full-height
- * overlay.
+ * Route-aware theming: pages that open on a dark, full-bleed hero
+ * (home, resort details, the concierge invitation) get transparent
+ * ivory type at the top; pages that open on paper get charcoal type.
+ * After a short scroll everything condenses into a blurred ivory rail.
+ * Flyouts reveal the collection and the disciplines; a theme toggle
+ * offers the nocturne. On small screens the whole thing becomes a calm
+ * full-height overlay.
  */
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+/** Routes whose hero opens dark and full-bleed (ivory nav type at top) */
+const isDarkHeroRoute = (pathname: string) =>
+  pathname === "/" || pathname === "/concierge" || /^\/resorts\/[^/]+/.test(pathname);
+
 export function Navbar() {
   const { scrollY } = useScroll();
+  const pathname = usePathname();
   const [condensed, setCondensed] = useState(false);
   const [openFlyout, setOpenFlyout] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,7 +37,8 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (v) => setCondensed(v > 48));
 
-  const light = !condensed && !mobileOpen; // ivory type over the hero
+  // Ivory type only over a dark hero, and only before the bar condenses
+  const light = isDarkHeroRoute(pathname) && !condensed && !mobileOpen;
 
   return (
     <>

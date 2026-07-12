@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { MastheadHero } from "@/components/layout/PageHeroes";
 import { Section } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ArticleCard } from "@/components/cards/ArticleCard";
@@ -21,13 +21,10 @@ export default function JournalPage() {
 
   return (
     <>
-      <PageHero
+      <MastheadHero
         eyebrow="The Journal"
         titleLines={["On the art", "of the reset."]}
         standfirst="Long-form thinking on longevity, sleep, medical wellness and discretion - written for the long view, and never to sell."
-        tone="journal-hero"
-        alt="An open journal in soft morning light"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Journal", href: "/journal" }]}
       />
 
       <Section>

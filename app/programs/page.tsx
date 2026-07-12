@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import { StatementHero } from "@/components/layout/PageHeroes";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ProgramRow } from "@/components/cards/ProgramRow";
@@ -19,13 +19,10 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <>
-      <PageHero
+      <StatementHero
         eyebrow="The Disciplines"
         titleLines={["Begin with", "the question."]}
         standfirst="Nine disciplines, each a lens onto the collection. Choose the one that names what you are seeking, and we will show you where it is done best."
-        tone="programs-hero"
-        alt="A calm path leading toward the mountains"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Programs", href: "/programs" }]}
       />
 
       <Section>

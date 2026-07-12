@@ -8,6 +8,7 @@ import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal } from "@/components/motion/Reveal";
 import { TextReveal } from "@/components/motion/TextReveal";
 import { resorts } from "@/data/resorts";
+import { worldLandPath } from "@/data/worldPath";
 
 /**
  * WorldMap - a private atlas.
@@ -60,8 +61,11 @@ export function WorldMap() {
           <Reveal>
             <div className="relative">
               <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="World map of the collection">
+                {/* Faded land silhouette - equirectangular, aligned to the plots */}
+                <path d={worldLandPath} className="fill-foreground" opacity={0.08} />
+
                 {/* Graticule */}
-                <g stroke="hsl(var(--line))" strokeWidth="0.6" opacity="0.5">
+                <g stroke="hsl(var(--line))" strokeWidth="0.6" opacity="0.35">
                   {Array.from({ length: 11 }).map((_, i) => (
                     <line key={`v${i}`} x1={(i / 10) * W} y1={0} x2={(i / 10) * W} y2={H} />
                   ))}

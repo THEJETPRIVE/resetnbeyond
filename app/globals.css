@@ -166,6 +166,53 @@
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* Drifting mist - the hero cinemagraph.                                */
+/* Two procedural fog strips (SVG fractal noise, stitch-tiled so they   */
+/* loop seamlessly) drift across the lower band of the hero at          */
+/* different speeds and in opposite directions. Transform-only and      */
+/* GPU-composited; the global reduced-motion rule freezes them and the  */
+/* wrapper is hidden via motion-reduce in the component.                */
+/* ------------------------------------------------------------------ */
+.fog-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  background-repeat: repeat-x;
+  background-size: 50% 100%;
+  filter: blur(16px);
+  mix-blend-mode: screen;
+  will-change: transform;
+  /* Fog belongs to the valley - fade it out toward its own top edge */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 55%);
+  mask-image: linear-gradient(180deg, transparent 0%, black 55%);
+}
+
+.fog-near {
+  opacity: 0.55;
+  animation: fog-drift 18s linear infinite;
+  /* Large billows with hard gaps (steep alpha contrast) - the distinct
+     shapes are what make the drift readable to the eye */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0022 0.006' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 2.2 0 0 0 -0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+.fog-far {
+  opacity: 0.35;
+  animation: fog-drift-reverse 32s linear infinite;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0035 0.008' numOctaves='3' seed='29' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 2 0 0 0 -0.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+@keyframes fog-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes fog-drift-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
 /* Lenis smooth-scroll baseline (owns momentum globally) */
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }

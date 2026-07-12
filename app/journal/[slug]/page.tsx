@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { getArticle, articleSlugs, articles } from "@/data/journal";
-import { PageHero } from "@/components/layout/PageHero";
+import { ArticleHero } from "@/components/layout/PageHeroes";
 import { Section } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ArticleCard } from "@/components/cards/ArticleCard";
@@ -20,8 +20,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 /**
- * JOURNAL ARTICLE - a reading experience. A cinematic opening, a narrow,
- * generous measure for the body, and two kindred essays to close.
+ * JOURNAL ARTICLE - a reading experience. A centered magazine opening
+ * with a framed plate, a narrow, generous measure for the body, and two
+ * kindred essays to close.
  */
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticle(params.slug);
@@ -31,18 +32,13 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <PageHero
-        eyebrow={`${article.category} · ${article.readTime}`}
-        titleLines={[article.title]}
+      <ArticleHero
+        category={article.category}
+        readTime={article.readTime}
+        title={article.title}
         standfirst={article.standfirst}
         tone={article.image.tone}
-        src={article.image.src}
         alt={article.image.alt}
-        breadcrumb={[
-          { label: "Home", href: "/" },
-          { label: "Journal", href: "/journal" },
-          { label: article.category, href: "/journal" },
-        ]}
       />
 
       <Section>

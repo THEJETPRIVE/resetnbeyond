@@ -38,6 +38,18 @@ export function Hero() {
           priority
           sizes="100vw"
         />
+        {/* Drifting mist - two procedural fog strips at different depths,
+            hugging the valley floor where the photograph already carries
+            cloud. Slow, opposing drifts read as living atmosphere; the
+            wrapper vanishes for users who prefer reduced motion. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] overflow-hidden motion-reduce:hidden"
+        >
+          <div className="fog-layer fog-far" />
+          <div className="fog-layer fog-near" />
+        </div>
+
         {/* Legibility washes - cinematic and text-aware. A gentle overall
             darken, a stronger wash from the left (where the headline sits)
             and from the base (sub-copy + scroll cue), leaving the upper-
