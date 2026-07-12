@@ -38,15 +38,17 @@ export function Hero() {
           priority
           sizes="100vw"
         />
-        {/* Legibility washes — warm charcoal, bottom-weighted, but light
-            enough that the photograph still reads through them */}
-        <div className="absolute inset-0 bg-charcoal/25" aria-hidden />
+        {/* Legibility washes — cinematic and text-aware. A gentle overall
+            darken, a stronger wash from the left (where the headline sits)
+            and from the base (sub-copy + scroll cue), leaving the upper-
+            right of the photograph open to breathe. */}
+        <div className="absolute inset-0 bg-charcoal/20" aria-hidden />
         <div
           className="absolute inset-0"
           aria-hidden
           style={{
             background:
-              "radial-gradient(130% 100% at 50% 28%, transparent 42%, hsl(30 8% 9% / 0.45) 100%), linear-gradient(180deg, hsl(30 8% 9% / 0.4) 0%, transparent 26%, transparent 60%, hsl(30 8% 9% / 0.72) 100%)",
+              "linear-gradient(90deg, hsl(30 8% 9% / 0.72) 0%, hsl(30 8% 9% / 0.4) 34%, transparent 66%), linear-gradient(180deg, hsl(30 8% 9% / 0.4) 0%, transparent 24%, transparent 46%, hsl(30 8% 9% / 0.75) 100%)",
           }}
         />
       </div>

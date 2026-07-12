@@ -47,7 +47,9 @@ const explicit: Record<string, string> = {
   chivasom: tropical[1],
   ananda: mountains[1],
   // Home + page heroes / plates
-  "hero-forest-dawn": forest[0],
+  // A serene, layered-misty-mountain plate — calm tonal field with the
+  // negative space a legible headline needs.
+  "hero-forest-dawn": "1505765050516-f72dcac9c60e",
   "why-advisory-portrait": spaInterior[0],
   "final-cta-horizon": tropical[2],
   "collection-hero": lakes[1],
