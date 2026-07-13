@@ -80,18 +80,20 @@ export function Hero() {
             By Invitation · Private Wellness Advisory
           </motion.p>
 
+          {/* Half the display-xl scale - the headline whispers rather than
+              announces (clamp is exactly 50% of the display-xl token) */}
           <TextReveal
             as="h1"
             lines={["Beyond Wellness.", "Beyond Luxury."]}
             delay={0.35}
-            className="max-w-5xl text-display-xl font-normal text-ivory"
+            className="max-w-5xl text-[clamp(1.75rem,4.5vw,4.5rem)] leading-[1.05] tracking-[-0.015em] font-normal text-ivory"
           />
 
           <motion.p
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.9 }}
-            className="mt-10 max-w-xl text-lg leading-relaxed text-ivory/75"
+            className="mt-10 max-w-xl text-[0.85rem] leading-relaxed text-ivory/75"
           >
             An invitation-only concierge for the world's most discerning few - curating, comparing and reserving the
             finest transformational retreats on earth.
