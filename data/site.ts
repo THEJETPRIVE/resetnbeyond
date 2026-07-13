@@ -24,10 +24,10 @@ export const primaryNav: NavItem[] = [
     label: "Collection",
     href: "/resorts",
     children: [
-      { label: "The Pinnacle Collection", href: "/resorts#pinnacle", note: "9 houses" },
-      { label: "Signature Collection", href: "/resorts#signature", note: "10 houses" },
-      { label: "Curated Luxury Retreats", href: "/resorts#curated", note: "10 houses" },
-      { label: "Exceptional Wellness Escapes", href: "/resorts#exceptional", note: "10 houses" },
+      { label: "The Pinnacle Collection", href: "/collections/pinnacle", note: "9 houses" },
+      { label: "Signature Collection", href: "/collections/signature", note: "10 houses" },
+      { label: "Curated Luxury Retreats", href: "/collections/curated", note: "10 houses" },
+      { label: "Exceptional Wellness Escapes", href: "/collections/exceptional", note: "10 houses" },
       { label: "Clinique La Prairie", href: "/resorts/clinique-la-prairie", note: "Switzerland" },
       { label: "View all 39 houses", href: "/resorts", note: "The full collection" },
     ],
@@ -53,10 +53,10 @@ export const footerNav = {
   collection: {
     title: "The Collection",
     links: [
-      { label: "The Pinnacle Collection", href: "/resorts#pinnacle" },
-      { label: "Signature Collection", href: "/resorts#signature" },
-      { label: "Curated Luxury Retreats", href: "/resorts#curated" },
-      { label: "Exceptional Wellness Escapes", href: "/resorts#exceptional" },
+      { label: "The Pinnacle Collection", href: "/collections/pinnacle" },
+      { label: "Signature Collection", href: "/collections/signature" },
+      { label: "Curated Luxury Retreats", href: "/collections/curated" },
+      { label: "Exceptional Wellness Escapes", href: "/collections/exceptional" },
     ],
   },
   programs: {

@@ -6,6 +6,7 @@ import { ThemeProvider, themeInitScript } from "@/components/providers/ThemeProv
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { JsonLd, organizationSchema, websiteSchema, SITE_URL } from "@/components/seo/JsonLd";
 import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
 import "./globals.css";
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main id="main">{children}</main>
             <Footer />
+            <BackToTop />
           </SmoothScroll>
         </ThemeProvider>
         {/* Privacy-friendly, cookieless analytics + Core Web Vitals RUM */}

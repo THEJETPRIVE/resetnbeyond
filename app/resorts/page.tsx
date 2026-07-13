@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { IndexHero } from "@/components/layout/PageHeroes";
-import { Section, SectionHeader } from "@/components/ui/Section";
-import { Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { ResortCard } from "@/components/cards/ResortCard";
+import { TierRow } from "@/components/collection/TierRow";
 import { CTASection } from "@/components/shared/CTASection";
 import { resorts } from "@/data/resorts";
 import { tiers } from "@/data/tiers";
@@ -14,11 +12,12 @@ export const metadata: Metadata = {
 };
 
 /**
- * RESORTS INDEX - the collection, in four tiers.
+ * RESORTS INDEX - the collection at a glance.
  *
- * The hero indexes the four collections; each tier then unfolds as its
- * own editorially-paced section, Pinnacle first. Alternate cards drop
- * on a gentle diagonal so each tier reads as a portfolio, not a grid.
+ * Four compact bands, one per tier: header + View All right-aligned,
+ * then a single row of four houses (the full tier swipes on mobile and
+ * lives on its own /collections page). The index skims; the tier pages
+ * immerse.
  */
 export default function ResortsPage() {
   return (
@@ -30,33 +29,19 @@ export default function ResortsPage() {
         items={tiers.map((t) => ({
           name: t.name,
           note: `${resorts.filter((r) => r.tier === t.slug).length} houses`,
-          href: `/resorts#${t.slug}`,
+          href: `/collections/${t.slug}`,
         }))}
       />
 
-      {tiers.map((tier, tierIndex) => {
-        const houses = resorts.filter((r) => r.tier === tier.slug);
-        return (
-          <Section key={tier.slug} id={tier.slug} tone={tierIndex % 2 === 1 ? "surface" : "default"}>
-            <div className="container">
-              <SectionHeader
-                eyebrow={`Collection ${["I", "II", "III", "IV"][tierIndex]}`}
-                title={tier.name}
-                lede={tier.line}
-                className="max-w-3xl"
-              />
-
-              <Stagger className="mt-16 grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2">
-                {houses.map((resort, i) => (
-                  <StaggerItem key={resort.slug} className={i % 2 === 1 ? "md:mt-28" : ""}>
-                    <ResortCard resort={resort} aspect="aspect-[3/4]" priority={tierIndex === 0 && i < 2} />
-                  </StaggerItem>
-                ))}
-              </Stagger>
-            </div>
-          </Section>
-        );
-      })}
+      {tiers.map((tier, i) => (
+        <TierRow
+          key={tier.slug}
+          tier={tier}
+          houses={resorts.filter((r) => r.tier === tier.slug)}
+          index={i}
+          tone={i % 2 === 1 ? "surface" : "default"}
+        />
+      ))}
 
       <CTASection
         eyebrow="Uncertain where to begin?"

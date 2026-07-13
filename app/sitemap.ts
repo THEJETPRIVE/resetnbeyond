@@ -14,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.8,
   }));
 
+  const collectionRoutes = ["pinnacle", "signature", "curated", "exceptional"].map((tier) => ({
+    url: `${base}/collections/${tier}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
+
   const resortRoutes = resortSlugs.map((slug) => ({
     url: `${base}/resorts/${slug}`,
     changeFrequency: "monthly" as const,
@@ -32,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...resortRoutes, ...programRoutes, ...journalRoutes];
+  return [...staticRoutes, ...collectionRoutes, ...resortRoutes, ...programRoutes, ...journalRoutes];
 }
