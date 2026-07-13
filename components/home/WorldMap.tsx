@@ -46,12 +46,12 @@ export function WorldMap() {
             <Reveal>
               <Eyebrow>The Atlas</Eyebrow>
             </Reveal>
-            <TextReveal as="h2" lines={["Nine houses.", "Four continents."]} className="mt-8 text-display-md font-normal" />
+            <TextReveal as="h2" lines={["Thirty-nine houses.", "One standard."]} className="mt-8 text-display-md font-normal" />
           </div>
           <Reveal delay={0.1}>
             <p className="prose-luxe md:pb-2">
-              From the Swiss Alps to the Maldivian atolls, a small collection chosen for one reason only: each does one
-              thing better than anywhere else on earth.
+              From the Swiss Alps to the Maldivian atolls, four collections chosen for one reason only: each house does
+              one thing better than almost anywhere else on earth.
             </p>
           </Reveal>
         </div>
@@ -157,9 +157,10 @@ export function WorldMap() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Quick index */}
+            {/* Quick index - the Pinnacle houses; every plot on the map
+                remains hoverable for the other three collections */}
             <div className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-8">
-              {resorts.map((r) => (
+              {resorts.filter((r) => r.tier === "pinnacle").map((r) => (
                 <button
                   key={r.slug}
                   onMouseEnter={() => setActive(r.slug)}

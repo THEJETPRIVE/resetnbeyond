@@ -18,6 +18,7 @@ export function GET() {
     .map(
       (r) => `### ${r.name} - ${r.country} (${r.region})
 URL: ${SITE_URL}/resorts/${r.slug}
+Collection tier: ${r.tier}
 ${r.established ? `Established: ${r.established}` : ""}
 
 ${r.tagline}

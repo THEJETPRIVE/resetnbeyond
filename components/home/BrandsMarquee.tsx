@@ -9,7 +9,8 @@ import { resorts } from "@/data/resorts";
  * the display serif carry more authority than any badge.
  */
 export function BrandsMarquee() {
-  const names = resorts.map((r) => r.name);
+  // The Pinnacle houses only - the marquee is provenance, not inventory
+  const names = resorts.filter((r) => r.tier === "pinnacle").map((r) => r.name);
 
   return (
     <Section className="py-24">

@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Local validation builds can use an isolated output dir (NEXT_DIST_DIR)
+  // so `next build` never collides with a running dev server's .next.
+  // Unset in production (Vercel), where it defaults to .next.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   images: {
     // Cinematic photography is served from curated remote sources during
     // pre-production. Swap these for the DAM / CDN before launch.

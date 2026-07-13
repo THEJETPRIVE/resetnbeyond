@@ -11,7 +11,7 @@ import { resorts } from "@/data/resorts";
  * the full nine; scarcity is the point, and the full collection is one
  * quiet line away.
  */
-const featured = ["six-senses-vana", "chenot-palace-weggis", "joali-being"];
+const featured = ["clinique-la-prairie", "chenot-palace-weggis", "joali-being"];
 
 export function FeaturedDestinations() {
   const picks = featured
@@ -23,7 +23,7 @@ export function FeaturedDestinations() {
       <div className="container">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeader
-            eyebrow="Featured Houses"
+            eyebrow="The Pinnacle Collection"
             title={
               <>
                 A curated few, <br className="hidden md:block" />
@@ -33,7 +33,7 @@ export function FeaturedDestinations() {
           />
           <div className="shrink-0 md:pb-3">
             <ButtonLink href="/resorts" variant="line">
-              All Nine Houses
+              All Four Collections
             </ButtonLink>
           </div>
         </div>

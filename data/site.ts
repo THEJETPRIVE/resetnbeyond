@@ -24,12 +24,12 @@ export const primaryNav: NavItem[] = [
     label: "Collection",
     href: "/resorts",
     children: [
-      { label: "Six Senses Vana", href: "/resorts/six-senses-vana", note: "India · Himalayas" },
-      { label: "Chenot Palace Weggis", href: "/resorts/chenot-palace-weggis", note: "Switzerland" },
+      { label: "The Pinnacle Collection", href: "/resorts#pinnacle", note: "9 houses" },
+      { label: "Signature Collection", href: "/resorts#signature", note: "10 houses" },
+      { label: "Curated Luxury Retreats", href: "/resorts#curated", note: "10 houses" },
+      { label: "Exceptional Wellness Escapes", href: "/resorts#exceptional", note: "10 houses" },
       { label: "Clinique La Prairie", href: "/resorts/clinique-la-prairie", note: "Switzerland" },
-      { label: "JOALI BEING", href: "/resorts/joali-being", note: "Maldives" },
-      { label: "Lanserhof Lans", href: "/resorts/lanserhof-lans", note: "Austria" },
-      { label: "View all houses", href: "/resorts", note: "The full collection" },
+      { label: "View all 39 houses", href: "/resorts", note: "The full collection" },
     ],
   },
   {
@@ -53,10 +53,10 @@ export const footerNav = {
   collection: {
     title: "The Collection",
     links: [
-      { label: "All Houses", href: "/resorts" },
-      { label: "Switzerland", href: "/resorts" },
-      { label: "Maldives", href: "/resorts" },
-      { label: "India", href: "/resorts" },
+      { label: "The Pinnacle Collection", href: "/resorts#pinnacle" },
+      { label: "Signature Collection", href: "/resorts#signature" },
+      { label: "Curated Luxury Retreats", href: "/resorts#curated" },
+      { label: "Exceptional Wellness Escapes", href: "/resorts#exceptional" },
     ],
   },
   programs: {

@@ -188,7 +188,7 @@ export const programs: Program[] = [
     faq: [
       {
         q: "What is the best sleep retreat in the world?",
-        a: "Six Senses Vana's Sleep & Circadian Restoration in the Himalayan foothills and Chiva-Som's Sleep Enhancement programme in Thailand lead the field; Ananda's Sleep Recovery adds classical Ayurveda and Yoga Nidra. Where geography itself is part of the medicine, we weigh the setting as carefully as the protocol.",
+        a: "Chiva-Som's Sleep Enhancement programme in Thailand and Ananda's Sleep Recovery in the Himalayas lead the field, with classical Ayurveda and Yoga Nidra; SHA Wellness Clinic adds clinical sleep-medicine diagnostics, and Sensei Lanai pairs rest with data-guided precision. Where geography itself is part of the medicine, we weigh the setting as carefully as the protocol.",
       },
       {
         q: "Can a retreat genuinely fix broken sleep?",

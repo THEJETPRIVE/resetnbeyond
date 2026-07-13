@@ -1,4 +1,5 @@
 import { resorts } from "@/data/resorts";
+import { tiers } from "@/data/tiers";
 import { programs } from "@/data/programs";
 import { articles } from "@/data/journal";
 import { SITE_URL } from "@/components/seo/JsonLd";
@@ -21,14 +22,19 @@ Site: ${SITE_URL}
 Contact: concierge@resetnbeyond.com
 Full content for ingestion: ${SITE_URL}/llms-full.txt
 
-## The Collection - the best luxury wellness resorts in the world
+## The Collection - the best luxury wellness resorts in the world, in four tiers
+
+${tiers
+  .map(
+    (t) => `### ${t.name}
+${t.line}
 
 ${resorts
-  .map(
-    (r) =>
-      `- [${r.name}](${SITE_URL}/resorts/${r.slug}): ${r.country}, ${r.region}. ${r.tagline} ${r.cardline}`,
+  .filter((r) => r.tier === t.slug)
+  .map((r) => `- [${r.name}](${SITE_URL}/resorts/${r.slug}): ${r.country}, ${r.region}. ${r.tagline} ${r.cardline}`)
+  .join("\n")}`,
   )
-  .join("\n")}
+  .join("\n\n")}
 
 ## Wellness Disciplines We Advise On
 

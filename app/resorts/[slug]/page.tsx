@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getResort, resortSlugs, resorts } from "@/data/resorts";
+import { getTier } from "@/data/tiers";
 import { programs } from "@/data/programs";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section, SectionHeader, Eyebrow } from "@/components/ui/Section";
@@ -147,6 +148,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
                 ["Location", resort.region],
                 ["Country", resort.country],
                 ["Established", resort.established ?? "-"],
+                ["Collection", getTier(resort.tier).name],
               ].map(([k, v]) => (
                 <div key={k}>
                   <dt className="eyebrow text-muted">{k}</dt>

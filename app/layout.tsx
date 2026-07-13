@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Reset & Beyond",
   },
   description:
-    "The private concierge for the world's best luxury wellness resorts and transformational retreats. We curate, compare and reserve Chenot Palace, Clinique La Prairie, SHA, Lanserhof, JOALI BEING, Six Senses Vana, Ananda and Chiva-Som.",
+    "The private concierge for the world's best luxury wellness resorts and transformational retreats. Thirty-nine houses in four collections - Clinique La Prairie, Chenot Palace, Lanserhof, SHA, JOALI BEING, Sensei Lanai, Palazzo Fiuggi, Amanemu, Ananda, Chiva-Som and more - curated, compared and privately reserved.",
   keywords: [
     "luxury wellness resort",
     "luxury wellness retreat",

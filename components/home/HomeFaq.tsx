@@ -13,7 +13,7 @@ import { Accordion, type QA } from "@/components/ui/Accordion";
 export const homeFaqs: QA[] = [
   {
     q: "Which are the best luxury wellness resorts in the world?",
-    a: "Our curated collection names nine: Chenot Palace Weggis and Clinique La Prairie in Switzerland, SHA Wellness Clinic in Spain and Mexico, Lanserhof Lans in Austria, JOALI BEING in the Maldives, Six Senses Vana and Ananda in the Himalayas in India, and Chiva-Som in Thailand. Each is chosen because it does one discipline - longevity, detox, sleep or medical wellness - better than anywhere else on earth.",
+    a: "Our collection spans thirty-nine houses in four tiers. At the clinical pinnacle: Clinique La Prairie, Chenot Palace Weggis, Lanserhof Lans, SHA Wellness Clinic, JOALI BEING, Tulåh, Sensei Lānaʻi, Palazzo Fiuggi and Amanemu. Beneath them, three further collections - Signature, Curated and Exceptional - from Ananda in the Himalayas and Kamalaya to Amangiri and Aman Kyoto. Each house is chosen because it does one discipline better than almost anywhere else on earth.",
   },
   {
     q: "Is Reset & Beyond a booking website?",
