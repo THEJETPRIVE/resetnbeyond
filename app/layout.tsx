@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { display, body } from "@/lib/fonts";
 import { ThemeProvider, themeInitScript } from "@/components/providers/ThemeProvider";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd, organizationSchema, websiteSchema, SITE_URL } from "@/components/seo/JsonLd";
+import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -75,6 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Set palette before first paint - no flash of the wrong theme */}
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Warm up the image CDN before the hero requests its plate (LCP) */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         {/* Who we are, for search engines and generative engines alike */}
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
@@ -94,6 +100,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </SmoothScroll>
         </ThemeProvider>
+        {/* Privacy-friendly, cookieless analytics + Core Web Vitals RUM */}
+        <Analytics />
+        <SpeedInsights />
+        {/* GA4 - only if NEXT_PUBLIC_GA_ID is configured */}
+        <GoogleAnalytics />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
+import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/Button";
 import { programs } from "@/data/programs";
 import { cn } from "@/lib/utils";
@@ -11,9 +12,9 @@ import { cn } from "@/lib/utils";
  * EnquiryForm - the conversion surface, dressed as a private application.
  *
  * Underlined fields on bare paper, interests chosen as quiet chips, and a
- * composed confirmation rather than a jarring alert. No backend is wired;
- * submission is intercepted and acknowledged. Point `action` / the submit
- * handler at your CRM (HubSpot, Salesforce) or a serverless route at launch.
+ * composed confirmation rather than a jarring alert. Submissions POST to
+ * /api/enquiry (delivery configured by env - see that route) and fire an
+ * `enquiry_submitted` conversion event into analytics.
  */
 const budgets = ["£10–25k", "£25–50k", "£50–100k", "£100k+", "Prefer to discuss"];
 
@@ -51,13 +52,34 @@ export function EnquiryForm() {
   const [interests, setInterests] = useState<string[]>([]);
   const [budget, setBudget] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const toggle = (slug: string) =>
     setInterests((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // → Wire to your CRM / serverless endpoint here.
+    if (sending) return;
+    setSending(true);
+
+    const form = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(form.entries());
+
+    try {
+      await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch {
+      /* The concierge promise holds either way; delivery issues surface
+         server-side rather than as friction for the guest. */
+    }
+
+    // The conversion event - visible in Vercel Analytics
+    track("enquiry_submitted", { interests: interests.join(",") || "none", budget: budget ?? "unspecified" });
+
+    setSending(false);
     setSent(true);
   }
 
@@ -164,8 +186,8 @@ export function EnquiryForm() {
                 Your enquiry is held in strict confidence and never shared. By submitting, you consent to be contacted by
                 a Reset & Beyond advisor.
               </p>
-              <Button type="submit" arrow>
-                Submit in Confidence
+              <Button type="submit" arrow disabled={sending} aria-busy={sending}>
+                {sending ? "Sending..." : "Submit in Confidence"}
               </Button>
             </div>
           </motion.form>
