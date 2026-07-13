@@ -9,9 +9,11 @@ import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-moti
  * primary CTAs, never everywhere. Disabled under reduced-motion and
  * on touch, where there is no cursor to court.
  */
+const MAX_SHIFT = 6; // px - a lean, never a lunge
+
 export function Magnetic({
   children,
-  strength = 0.28,
+  strength = 0.08,
   className,
 }: {
   children: React.ReactNode;
@@ -22,14 +24,16 @@ export function Magnetic({
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const sx = useSpring(x, { stiffness: 150, damping: 15, mass: 0.4 });
-  const sy = useSpring(y, { stiffness: 150, damping: 15, mass: 0.4 });
+  const sx = useSpring(x, { stiffness: 150, damping: 18, mass: 0.4 });
+  const sy = useSpring(y, { stiffness: 150, damping: 18, mass: 0.4 });
+
+  const clamp = (v: number) => Math.max(-MAX_SHIFT, Math.min(MAX_SHIFT, v));
 
   function onMove(e: React.MouseEvent) {
     if (reduce || !ref.current) return;
     const rect = ref.current.getBoundingClientRect();
-    x.set((e.clientX - (rect.left + rect.width / 2)) * strength);
-    y.set((e.clientY - (rect.top + rect.height / 2)) * strength);
+    x.set(clamp((e.clientX - (rect.left + rect.width / 2)) * strength));
+    y.set(clamp((e.clientY - (rect.top + rect.height / 2)) * strength));
   }
   function reset() {
     x.set(0);
