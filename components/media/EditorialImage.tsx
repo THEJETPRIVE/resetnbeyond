@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { imageForTone } from "@/lib/images";
@@ -59,10 +59,20 @@ export function EditorialImage({
   const reduce = useReducedMotion();
   const [loaded, setLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   // Prefer an explicit src; otherwise resolve provisional photography from
   // the tone seed. Either way, the toned duotone remains as the fallback.
   const resolvedSrc = src ?? imageForTone(tone);
+
+  // Hydration-race guard: in production the CDN often finishes loading the
+  // image BEFORE React hydrates, so the onLoad handler attaches too late
+  // and never fires - leaving the image stuck at opacity 0. If the img is
+  // already complete on mount, reveal it immediately.
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth > 0) setLoaded(true);
+  }, [resolvedSrc]);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -100,12 +110,14 @@ export function EditorialImage({
       >
         {resolvedSrc && (
           <Image
+            ref={imgRef}
             src={resolvedSrc}
             alt={alt}
             fill
             sizes={sizes}
             priority={priority}
             onLoad={() => setLoaded(true)}
+            onError={() => setLoaded(false)}
             // A whisper of desaturation keeps live photography inside the
             // muted ivory/sage palette rather than fighting it.
             style={{ filter: "saturate(0.86) contrast(1.02)" }}
