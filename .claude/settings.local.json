@@ -8,7 +8,15 @@
       "Bash(NEXT_DIST_DIR=.next-build npm run build)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(awk '{print $2}')",
+      "Bash(awk '{print $1}')",
+      "Bash(time curl -s -o /dev/null -w \"%{http_code}\\\\n\" -L --max-time 15 \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=60&q=30\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -s --max-time 90 http://localhost:3000/resorts -o /tmp/r.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -s --max-time 60 http://localhost:3000/ -o /tmp/h.html)",
+      "Bash(S=/private/tmp/claude-501/-Users-ak-Documents-WELLNESS/d67ead58-be47-42bb-9545-0db602f9d369/scratchpad node /private/tmp/claude-501/-Users-ak-Documents-WELLNESS/d67ead58-be47-42bb-9545-0db602f9d369/scratchpad/genImageMap.mjs)"
     ]
   }
 }
