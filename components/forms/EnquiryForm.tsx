@@ -48,7 +48,7 @@ function Field({
   );
 }
 
-export function EnquiryForm() {
+export function EnquiryForm({ presetResort }: { presetResort?: string } = {}) {
   const [interests, setInterests] = useState<string[]>([]);
   const [budget, setBudget] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
@@ -112,6 +112,16 @@ export function EnquiryForm() {
             transition={{ duration: 0.4 }}
             className="flex flex-col gap-12"
           >
+            {/* Pre-filled property - set when the form opens from a
+                "Reserve This House" action on a resort page */}
+            {presetResort && (
+              <div className="border-b border-line pb-8">
+                <span className="eyebrow text-muted">Your enquiry concerns</span>
+                <p className="mt-3 font-serif text-3xl font-normal text-foreground">{presetResort}</p>
+                <input type="hidden" name="resort" value={presetResort} />
+              </div>
+            )}
+
             <div className="grid gap-10 md:grid-cols-2">
               <Field label="Full name" name="name" required autoComplete="name" />
               <Field label="Email" name="email" type="email" required autoComplete="email" />

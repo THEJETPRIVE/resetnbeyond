@@ -24,6 +24,8 @@ interface Enquiry {
   interests?: string;
   budget?: string;
   message?: string;
+  /** Set when the enquiry originates from a "Reserve This House" action */
+  resort?: string;
 }
 
 export async function POST(req: Request) {
@@ -41,6 +43,7 @@ export async function POST(req: Request) {
   }
 
   const lines = [
+    data.resort && `House: ${data.resort}`,
     `Name: ${name}`,
     `Email: ${email}`,
     data.phone && `Telephone: ${data.phone}`,
@@ -64,7 +67,7 @@ export async function POST(req: Request) {
         from: "Reset & Beyond <onboarding@resend.dev>",
         to: [TO],
         reply_to: email,
-        subject: `Private enquiry - ${name}`,
+        subject: data.resort ? `Reservation enquiry - ${data.resort} - ${name}` : `Private enquiry - ${name}`,
         text: lines,
       }),
     });

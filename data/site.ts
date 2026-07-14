@@ -28,8 +28,6 @@ export const primaryNav: NavItem[] = [
       { label: "Signature Collection", href: "/collections/signature", note: "10 houses" },
       { label: "Curated Luxury Retreats", href: "/collections/curated", note: "10 houses" },
       { label: "Exceptional Wellness Escapes", href: "/collections/exceptional", note: "10 houses" },
-      { label: "Clinique La Prairie", href: "/resorts/clinique-la-prairie", note: "Switzerland" },
-      { label: "View all 39 houses", href: "/resorts", note: "The full collection" },
     ],
   },
   {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 /**
@@ -12,6 +13,8 @@ import Lenis from "lenis";
  * reduced motion, handing control back to the native scroller.
  */
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
@@ -41,6 +44,15 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       (window as unknown as { lenis?: Lenis }).lenis = undefined;
     };
   }, []);
+
+  // Every route change opens at the top of the new page. Lenis keeps its
+  // own scroll state across client-side navigations, so without this a
+  // guest who was deep in a collection page lands deep in the next page.
+  useEffect(() => {
+    const lenis = (window as unknown as { lenis?: Lenis }).lenis;
+    if (lenis) lenis.scrollTo(0, { immediate: true });
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return <>{children}</>;
 }

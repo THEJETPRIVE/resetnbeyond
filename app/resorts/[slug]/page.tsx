@@ -11,6 +11,7 @@ import { TextReveal } from "@/components/motion/TextReveal";
 import { EditorialImage } from "@/components/media/EditorialImage";
 import { Accordion } from "@/components/ui/Accordion";
 import { Gallery } from "@/components/resort/Gallery";
+import { ReserveHouse } from "@/components/resort/ReserveHouse";
 import { ResortCard } from "@/components/cards/ResortCard";
 import { CTASection } from "@/components/shared/CTASection";
 import { JsonLd, SITE_URL } from "@/components/seo/JsonLd";
@@ -303,15 +304,7 @@ export default function ResortDetailPage({ params }: { params: { slug: string } 
                 All figures are indicative and arranged privately. Your advisor will confirm current programmes, suites
                 and availability on enquiry.
               </p>
-              <Link
-                href="/concierge"
-                className="group mt-10 inline-flex items-center gap-2 text-sm uppercase tracking-wide2 text-foreground"
-              >
-                <span className="relative">
-                  Reserve This House
-                  <span className="absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-luxe group-hover:origin-left group-hover:scale-x-100" />
-                </span>
-              </Link>
+              <ReserveHouse resortName={resort.name} />
             </div>
           </Reveal>
         </div>
