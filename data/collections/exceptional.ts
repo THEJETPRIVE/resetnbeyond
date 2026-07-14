@@ -208,7 +208,7 @@ export const exceptionalResorts: Resort[] = [
     coordinates: [37.098, -8.392],
     tagline: "The sea, prescribed.",
     cardline: "Thalassotherapy authority in clifftop gardens above Atlantic coves.",
-    categories: ["longevity", "detox", "medical-wellness", "nutrition", "sleep"],
+    categories: ["longevity", "detox", "medical-wellness", "nutrition", "sleep", "weight-optimisation"],
     hero: {
       tone: "vilalara-algarve",
       alt: "Clifftop gardens descending to a turquoise Atlantic cove on the Algarve",
@@ -271,7 +271,7 @@ export const exceptionalResorts: Resort[] = [
     established: "1988",
     tagline: "Give us your body for a week, and we'll give you back your mind.",
     cardline: "The Caribbean's original wellbeing resort - a daily treatment included, always.",
-    categories: ["executive-reset", "nutrition", "sleep", "detox"],
+    categories: ["executive-reset", "nutrition", "sleep", "detox", "fitness-performance"],
     hero: {
       tone: "bodyholiday",
       alt: "Crescent Caribbean bay with palms and a wellness resort at golden hour",
@@ -333,7 +333,7 @@ export const exceptionalResorts: Resort[] = [
     coordinates: [9.97, -84.4],
     tagline: "A boutique sanctuary on a mountain of quartz.",
     cardline: "Diana Stobo's plant-rich vision, above Costa Rica's Central Valley.",
-    categories: ["detox", "nutrition", "womens-health", "sleep"],
+    categories: ["detox", "nutrition", "womens-health", "sleep", "mind-wellbeing"],
     hero: {
       tone: "the-retreat-costa-rica",
       alt: "White boutique retreat on a green Costa Rican mountaintop above the Central Valley",
@@ -459,7 +459,7 @@ export const exceptionalResorts: Resort[] = [
     established: "2024",
     tagline: "The SHA method, reborn on the Caribbean coast.",
     cardline: "Integrative longevity, framed by jungle and sea.",
-    categories: ["longevity", "detox", "biohacking", "medical-wellness", "womens-health"],
+    categories: ["longevity", "detox", "biohacking", "medical-wellness", "womens-health", "weight-optimisation"],
     hero: {
       tone: "sha-mx",
       alt: "Contemporary wellness clinic between Yucatán jungle and Caribbean sea",
@@ -522,7 +522,7 @@ export const exceptionalResorts: Resort[] = [
     established: "1986",
     tagline: "A French château estate, thirty-two guests at a time.",
     cardline: "Provence in California - five staff to every guest, and no shortcuts.",
-    categories: ["nutrition", "detox", "womens-health", "executive-reset", "preventive-health"],
+    categories: ["nutrition", "detox", "womens-health", "executive-reset", "preventive-health", "weight-optimisation", "fitness-performance"],
     hero: {
       tone: "cal-a-vie",
       alt: "French chateau-style estate amid Southern California hills and vineyards at golden hour",
@@ -585,7 +585,7 @@ export const exceptionalResorts: Resort[] = [
     established: "2019",
     tagline: "A secret garden, kept by the forest.",
     cardline: "Onsen bathing and profound quiet, minutes from the Golden Pavilion.",
-    categories: ["sleep", "executive-reset", "nutrition"],
+    categories: ["sleep", "executive-reset", "nutrition", "traditional-healing"],
     hero: {
       tone: "aman-kyoto",
       alt: "Minimalist pavilions in a moss and maple forest garden in northern Kyoto",

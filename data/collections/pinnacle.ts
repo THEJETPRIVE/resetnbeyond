@@ -20,7 +20,7 @@ export const pinnacleResorts: Resort[] = [
     established: "1931",
     tagline: "Ninety years of longevity science, above Lake Geneva.",
     cardline: "The original longevity clinic - medicine, refined into ritual.",
-    categories: ["longevity", "medical-wellness", "preventive-health", "healthy-aging"],
+    categories: ["longevity", "medical-wellness", "preventive-health", "womens-health"],
     hero: {
       tone: "laprairie",
       alt: "Lake Geneva and the Alps seen from a historic clinic on the Montreux hillside",
@@ -146,7 +146,7 @@ export const pinnacleResorts: Resort[] = [
     established: "1984",
     tagline: "The gut is the root. The Alps are the medicine.",
     cardline: "Modern Mayr medicine, at Tyrolean altitude.",
-    categories: ["detox", "medical-wellness", "preventive-health", "executive-reset", "nutrition"],
+    categories: ["detox", "medical-wellness", "preventive-health", "executive-reset", "nutrition", "weight-optimisation"],
     hero: {
       tone: "lanserhof",
       alt: "Modern clinic on a Tyrolean alpine plateau with mountains behind",
@@ -209,7 +209,7 @@ export const pinnacleResorts: Resort[] = [
     established: "2008",
     tagline: "Where macrobiotic nutrition meets Western medicine.",
     cardline: "Integrative medicine on a Mediterranean hillside.",
-    categories: ["longevity", "detox", "weight-optimization", "medical-wellness", "preventive-health"],
+    categories: ["longevity", "detox", "weight-optimisation", "medical-wellness", "preventive-health"],
     hero: {
       tone: "sha-es",
       alt: "White terraced clinic on a Mediterranean hillside overlooking the sea",
@@ -397,7 +397,7 @@ export const pinnacleResorts: Resort[] = [
     established: "2019",
     tagline: "Data-driven wellbeing, in the highlands of a private Hawaiian island.",
     cardline: "Larry Ellison's island, Dr David Agus's science, one adults-only sanctuary.",
-    categories: ["preventive-health", "sleep", "executive-reset", "nutrition", "biohacking"],
+    categories: ["preventive-health", "sleep", "executive-reset", "nutrition", "biohacking", "mind-wellbeing", "fitness-performance"],
     hero: {
       tone: "sensei-lanai",
       alt: "Serene garden estate in the misty uplands of Lanai with Cook pines",
@@ -523,7 +523,7 @@ export const pinnacleResorts: Resort[] = [
     established: "2016",
     tagline: "Aman's onsen sanctuary, above the pearl waters of Ago Bay.",
     cardline: "Hot-spring bathing and Aman quietude, in Japan's spiritual heartland.",
-    categories: ["sleep", "executive-reset", "detox", "preventive-health"],
+    categories: ["sleep", "executive-reset", "detox", "preventive-health", "traditional-healing"],
     hero: {
       tone: "amanemu",
       alt: "Low Japanese pavilions above the still waters of Ago Bay at dusk",

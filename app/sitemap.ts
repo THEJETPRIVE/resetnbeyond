@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const destinationRoutes = ["alps-and-italy","iberia-and-atlantic","asia-and-indian-ocean","japan","north-america","latin-america-caribbean"].map((d) => ({
+    url: `${base}/destinations/${d}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   const resortRoutes = resortSlugs.map((slug) => ({
     url: `${base}/resorts/${slug}`,
     changeFrequency: "monthly" as const,
@@ -38,5 +44,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...collectionRoutes, ...resortRoutes, ...programRoutes, ...journalRoutes];
+  return [...staticRoutes, ...collectionRoutes, ...destinationRoutes, ...resortRoutes, ...programRoutes, ...journalRoutes];
 }

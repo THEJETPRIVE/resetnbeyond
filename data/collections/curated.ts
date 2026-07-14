@@ -21,7 +21,7 @@ export const curatedResorts: Resort[] = [
     established: "2018",
     tagline: "Come back to life, quietly, in the Nusa Dua hills.",
     cardline: "Boutique Balinese wellness for the mind that will not switch off.",
-    categories: ["sleep", "detox", "nutrition", "executive-reset"],
+    categories: ["sleep", "detox", "nutrition", "executive-reset", "mind-wellbeing"],
     hero: {
       tone: "revivo",
       alt: "Teak pavilions of a boutique wellness resort in the forested hills of Nusa Dua at dusk",
@@ -117,7 +117,7 @@ export const curatedResorts: Resort[] = [
     established: "2010",
     tagline: "Balinese healing, practised at the river's own pace.",
     cardline: "Sacred arts and pioneering plant-based cuisine on the Ayung.",
-    categories: ["detox", "nutrition", "sleep"],
+    categories: ["detox", "nutrition", "sleep", "mind-wellbeing", "traditional-healing"],
     hero: {
       tone: "fivelements",
       alt: "Bamboo pavilions above the Ayung River wrapped in jungle at dawn",
@@ -213,7 +213,7 @@ export const curatedResorts: Resort[] = [
     established: "2022",
     tagline: "Arabian healing traditions, given a modern address.",
     cardline: "The Middle East's largest wellness destination, run on Chiva-Som's method.",
-    categories: ["medical-wellness", "preventive-health", "detox", "nutrition", "womens-health"],
+    categories: ["medical-wellness", "preventive-health", "detox", "nutrition", "womens-health", "traditional-healing"],
     hero: {
       tone: "zulal",
       alt: "Low sand-toned wellness resort on a calm Arabian shoreline at dusk",
@@ -309,7 +309,7 @@ export const curatedResorts: Resort[] = [
     established: "2016",
     tagline: "A hacienda restored, a cenote at its heart.",
     cardline: "Mayan healing on a nineteenth-century estate near Mérida.",
-    categories: ["detox", "executive-reset", "nutrition", "sleep"],
+    categories: ["detox", "executive-reset", "nutrition", "sleep", "traditional-healing"],
     hero: {
       tone: "chable-yucatan",
       alt: "Restored hacienda facade rising from Yucatán jungle in golden light",
@@ -597,7 +597,7 @@ export const curatedResorts: Resort[] = [
     established: "1958",
     tagline: "One week, forty guests, and a door that has changed lives since 1958.",
     cardline: "America's legendary spa ranch - Japanese calm, week-long rigour, profits to charity.",
-    categories: ["detox", "nutrition", "womens-health", "executive-reset"],
+    categories: ["detox", "nutrition", "womens-health", "executive-reset", "weight-optimisation", "fitness-performance"],
     hero: {
       tone: "golden-door",
       alt: "Japanese-inspired gate and gardens of a Californian spa ranch in morning light",
@@ -693,7 +693,7 @@ export const curatedResorts: Resort[] = [
     established: "2001",
     tagline: "A journey of intention, walled in by red rock.",
     cardline: "Boynton Canyon's destination spa - crystal grotto, red rock, real depth.",
-    categories: ["sleep", "womens-health", "executive-reset", "nutrition"],
+    categories: ["sleep", "womens-health", "executive-reset", "nutrition", "mind-wellbeing"],
     hero: {
       tone: "mii-amo",
       alt: "Adobe spa architecture beneath towering red rock walls in Boynton Canyon",
@@ -789,7 +789,7 @@ export const curatedResorts: Resort[] = [
     established: "1995",
     tagline: "Life in balance, one present moment at a time.",
     cardline: "The mindfulness original - equine wisdom and device-free calm in the Sonoran Desert.",
-    categories: ["sleep", "executive-reset", "preventive-health", "nutrition"],
+    categories: ["sleep", "executive-reset", "preventive-health", "nutrition", "mind-wellbeing"],
     hero: {
       tone: "miraval-arizona",
       alt: "Sonoran Desert resort at dawn with saguaro cacti and the Santa Catalina mountains",
@@ -885,7 +885,7 @@ export const curatedResorts: Resort[] = [
     established: "1979",
     tagline: "The original American wellness resort, still setting the pace.",
     cardline: "Integrative medicine, fitness science and spirit - united since 1979.",
-    categories: ["medical-wellness", "preventive-health", "longevity", "nutrition", "sleep"],
+    categories: ["medical-wellness", "preventive-health", "longevity", "nutrition", "sleep", "weight-optimisation", "fitness-performance"],
     hero: {
       tone: "canyon-ranch",
       alt: "Adobe wellness campus in the Sonoran Desert with mountain backdrop at golden hour",

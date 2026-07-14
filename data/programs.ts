@@ -325,6 +325,134 @@ export const programs: Program[] = [
     ],
     image: { tone: "prog-medical", alt: "Refined clinical interior in warm light", aiPrompt: "Refined modern clinical interior bathed in warm light, minimal and precise yet inviting, muted palette, editorial", keywords: "modern clinical interior warm minimal refined" },
   },
+  {
+    slug: "mind-wellbeing",
+    name: "Mind & Emotional Wellbeing",
+    eyebrow: "Stillness",
+    tagline: "The quietest luxury is a settled mind.",
+    intro: [
+      "Stress, anxiety and emotional depletion now bring as many guests to the world's great retreats as any physical concern. The finest houses treat the mind with the same seriousness as the body - through mindfulness, therapy, breathwork and traditions that predate the term wellbeing by centuries.",
+      "We curate the sanctuaries where emotional work is done with depth and discretion - places built for the guest who appears fine and is quietly running on empty.",
+    ],
+    signals: [
+      "Stress that rest alone no longer resolves",
+      "Anxiety, low mood or emotional exhaustion",
+      "A major transition - loss, change, reinvention",
+      "The wish to build a durable inner practice",
+    ],
+    approach: [
+      { title: "Be heard first", body: "Unhurried consultations with psychologists, counsellors or masters of contemplative traditions before any programme is set." },
+      { title: "Practice daily", body: "Meditation, breathwork, movement and therapy sequenced into a rhythm the nervous system can trust." },
+      { title: "Leave with a practice", body: "A personal, portable discipline - not a memory of calm, but the means to return to it." },
+    ],
+    faq: [
+      {
+        q: "What is the best luxury retreat for stress and mental wellbeing?",
+        a: "Kamalaya Koh Samui and Miraval Arizona are the acknowledged leaders - decades of genuine emotional-wellbeing practice each. COMO Shambhala Estate, Mii amo and Fivelements offer comparable depth in Bali and Sedona; Sensei Lanai adds a data-guided approach. We match the house to the nature of what you are carrying.",
+      },
+      {
+        q: "Is this therapy or a holiday?",
+        a: "Both, held in careful balance. Expect real practitioners - psychologists, mindfulness teachers, traditional healers - inside a stay that still feels like the finest travel of your year.",
+      },
+    ],
+    image: { tone: "prog-mind", alt: "A still zen garden in soft light", aiPrompt: "Serene Japanese zen garden in soft morning light, raked gravel, profound stillness, muted editorial palette", keywords: "zen garden stillness calm meditation" },
+  },
+  {
+    slug: "weight-optimisation",
+    name: "Weight Optimisation",
+    eyebrow: "Recomposition",
+    tagline: "Sustainable change, medically led - never a bootcamp.",
+    intro: [
+      "The finest weight programmes are not about deprivation but recalibration - metabolic testing, medical supervision, precise nutrition and movement, sequenced so the change endures after departure.",
+      "We curate the clinics where weight is treated as physiology rather than willpower, and where the table remains a pleasure even under discipline.",
+    ],
+    signals: [
+      "Weight that no longer responds to effort",
+      "Metabolic drift - energy, sleep and appetite out of rhythm",
+      "A medical reason to change, stated plainly by your physician",
+      "The wish for a result that survives re-entry",
+    ],
+    approach: [
+      { title: "Measure the metabolism", body: "Body composition, metabolic and hormonal testing establish why - before any programme prescribes what." },
+      { title: "Recompose, not restrict", body: "Medical nutrition, strength and movement calibrated to preserve muscle and reset appetite signalling." },
+      { title: "Engineer the return", body: "Habits, follow-up and physician handover designed for the first ninety days at home, where results are truly decided." },
+    ],
+    faq: [
+      {
+        q: "What is the best luxury weight loss retreat in the world?",
+        a: "SHA Wellness Clinic in Spain and Mexico leads for medical weight programmes; Lanserhof Lans resets metabolism from the gut outward; The Farm at San Benito, Cal-a-Vie, Golden Door and Canyon Ranch offer immersive, coached transformation in remarkable settings. The right choice depends on how medical you want the journey to be.",
+      },
+      {
+        q: "How much weight change is realistic in one stay?",
+        a: "A medically honest programme optimises for composition and metabolic reset rather than a scale number - typically visible, sustainable change within two weeks, engineered to continue at home rather than rebound.",
+      },
+    ],
+    image: { tone: "prog-weight", alt: "Morning light across a calm landscape", aiPrompt: "Calm dawn landscape, long soft light, sense of renewal and discipline, muted editorial palette", keywords: "dawn landscape renewal calm discipline" },
+  },
+  {
+    slug: "fitness-performance",
+    name: "Fitness & Performance",
+    eyebrow: "Vitality",
+    tagline: "Strength, capacity and recovery, coached at the highest level.",
+    intro: [
+      "A distinct discipline from the medical reset: the pursuit of physical capacity itself. The best houses pair elite coaching and sports science with recovery therapies that professional athletes would recognise.",
+      "We curate the resorts where training is joyful, precisely measured and matched by world-class recovery - so you leave fitter than you have been in years, not merely rested.",
+    ],
+    signals: [
+      "Fitness that has plateaued despite effort",
+      "An event, expedition or season to prepare for",
+      "The wish to train seriously without training alone",
+      "Recovery that no longer keeps pace with output",
+    ],
+    approach: [
+      { title: "Test capacity", body: "Movement screening, VO2 and strength baselines - training built on measurement, not guesswork." },
+      { title: "Train with intent", body: "Daily coached sessions across strength, endurance and mobility, scaled to your level and goals." },
+      { title: "Recover like a professional", body: "Physiotherapy, cold and heat, sleep and nutrition treated as part of the training, not a reward for it." },
+    ],
+    faq: [
+      {
+        q: "What is the best luxury fitness retreat?",
+        a: "BodyHoliday Saint Lucia built its entire island around this question; Chiva-Som's Optimal Performance and Canyon Ranch's sports-science depth lead in Asia and America; RAKxa and Sensei Lanai add clinical-grade testing. Golden Door remains the definitive coached week.",
+      },
+      {
+        q: "Do I need to be fit already?",
+        a: "No. Every house we curate scales from returning-to-movement to genuinely athletic - the constant is expert coaching and honest assessment, not a required standard on arrival.",
+      },
+    ],
+    image: { tone: "prog-fitness", alt: "First light over open terrain", aiPrompt: "Athlete-less landscape at first light, open terrain, energy and possibility, muted editorial palette", keywords: "dawn terrain energy movement" },
+  },
+  {
+    slug: "traditional-healing",
+    name: "Ancient & Traditional Healing",
+    eyebrow: "Lineage",
+    tagline: "Medicine measured in millennia, practised without dilution.",
+    intro: [
+      "Long before the wellness industry, there were the great healing traditions - Ayurveda, classical Chinese medicine, Balinese healing, Mayan ritual, Traditional Arabic and Islamic Medicine, the Japanese onsen. The finest houses practise them with lineage and rigour, not as spa theatre.",
+      "We curate the places where these traditions are held by genuine masters - and where a sceptical, modern guest discovers why they endured.",
+    ],
+    signals: [
+      "The sense that conventional approaches have reached their limit",
+      "A wish to be treated as a whole system, not a symptom",
+      "Curiosity about a tradition, pursued at the source",
+      "The desire for healing with cultural and spiritual depth",
+    ],
+    approach: [
+      { title: "Begin with the tradition's own diagnosis", body: "Pulse, tongue, constitution, energy - each lineage reads the body in its own language before treating it." },
+      { title: "Submit to the sequence", body: "Traditional protocols unfold in ordered stages across days or weeks; the discipline is the medicine." },
+      { title: "Integrate, do not appropriate", body: "The best houses pair tradition with modern medical oversight, so depth never comes at the cost of safety." },
+    ],
+    faq: [
+      {
+        q: "Where is the best authentic Ayurveda or traditional healing retreat?",
+        a: "Ananda in the Himalayas for classical Ayurveda above the Ganges; Kamalaya and Fivelements for Asian healing traditions; both Lefay resorts for classical Chinese medicine in Italy; Zulal for Traditional Arabic and Islamic Medicine; Chable for Mayan ritual; Amanemu and Aman Kyoto for the Japanese bathing tradition.",
+      },
+      {
+        q: "Do these traditions work alongside modern medicine?",
+        a: "At the houses we curate, yes - programmes are medically supervised, findings are shared with your physicians where you wish, and tradition is treated as a complement to modern care, never a replacement for it.",
+      },
+    ],
+    image: { tone: "prog-traditional", alt: "Ritual vessels in warm candlelight", aiPrompt: "Traditional healing vessels, brass and ceramic, warm candlelight, sense of lineage and ceremony, editorial", keywords: "ritual brass candlelight tradition ceremony" },
+  },
 ];
 
 export const getProgram = (slug: string) => programs.find((p) => p.slug === slug);

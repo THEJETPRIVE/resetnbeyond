@@ -219,4 +219,8 @@ export const imageIdMap: Record<string, string> = {
   "sha-mx-a": "1571019613454-1cb2f99b2d8b",
   "sha-mx-b": "1545389336-cf090694435e",
   "sha-mx-c": "1547592180-85f173990554",
+  "prog-mind": "1492571350019-22de08371fd3",
+  "prog-traditional": "1524492412937-b28074a5d7da",
+  "prog-weight": "1548013146-72479768bada",
+  "prog-fitness": "1522383225653-ed111181a951",
 };

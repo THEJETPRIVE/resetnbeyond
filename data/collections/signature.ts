@@ -21,7 +21,7 @@ export const signatureResorts: Resort[] = [
     established: "2000",
     tagline: "A Maharaja's palace estate, given to Ayurveda.",
     cardline: "Himalayan Ayurveda and Yoga, above the Ganges.",
-    categories: ["detox", "sleep", "womens-health", "preventive-health", "nutrition"],
+    categories: ["detox", "sleep", "womens-health", "preventive-health", "nutrition", "traditional-healing"],
     hero: {
       tone: "ananda",
       alt: "Palace estate above the Ganges valley amid Himalayan forest",
@@ -84,7 +84,7 @@ export const signatureResorts: Resort[] = [
     established: "1995",
     tagline: "The original beachfront wellness sanctuary.",
     cardline: "Three decades of holistic mastery, by the Gulf of Thailand.",
-    categories: ["detox", "sleep", "executive-reset", "nutrition", "preventive-health"],
+    categories: ["detox", "sleep", "executive-reset", "nutrition", "preventive-health", "fitness-performance"],
     hero: {
       tone: "chivasom",
       alt: "Tropical garden pavilions beside a calm beach on the Gulf of Thailand",
@@ -147,7 +147,7 @@ export const signatureResorts: Resort[] = [
     established: "2005",
     tagline: "A sanctuary grown around a monks' cave.",
     cardline: "Holistic healing with an emotional intelligence all its own.",
-    categories: ["detox", "sleep", "executive-reset", "nutrition", "womens-health"],
+    categories: ["detox", "sleep", "executive-reset", "nutrition", "womens-health", "mind-wellbeing", "traditional-healing"],
     hero: {
       tone: "kamalaya",
       alt: "Hillside wellness sanctuary descending through tropical forest to the sea on Koh Samui",
@@ -210,7 +210,7 @@ export const signatureResorts: Resort[] = [
     established: "2005",
     tagline: "An estate for change, above the Ayung River.",
     cardline: "Residential health retreat in Bali's sacred river valley.",
-    categories: ["detox", "executive-reset", "sleep", "nutrition", "preventive-health"],
+    categories: ["detox", "executive-reset", "sleep", "nutrition", "preventive-health", "mind-wellbeing"],
     hero: {
       tone: "como-shambhala-estate",
       alt: "Jungle estate pavilions above the Ayung River gorge near Ubud",
@@ -273,7 +273,7 @@ export const signatureResorts: Resort[] = [
     established: "2020",
     tagline: "Hospital-grade wellness in Bangkok's green lung.",
     cardline: "Fully integrative medical wellness, minutes from the capital.",
-    categories: ["medical-wellness", "preventive-health", "detox", "biohacking", "executive-reset"],
+    categories: ["medical-wellness", "preventive-health", "detox", "biohacking", "executive-reset", "fitness-performance", "traditional-healing"],
     hero: {
       tone: "rakxa",
       alt: "Contemporary wellness villas amid dense greenery on Bangkok's Bang Krachao peninsula",
@@ -336,7 +336,7 @@ export const signatureResorts: Resort[] = [
     established: "2008",
     tagline: "Chinese medicine, Italian light.",
     cardline: "The Lefay SPA Method, terraced above Lake Garda.",
-    categories: ["detox", "sleep", "preventive-health", "executive-reset", "nutrition"],
+    categories: ["detox", "sleep", "preventive-health", "executive-reset", "nutrition", "traditional-healing"],
     hero: {
       tone: "lefay-lago-di-garda",
       alt: "Eco-luxury resort terraced into olive groves above Lake Garda",
@@ -399,7 +399,7 @@ export const signatureResorts: Resort[] = [
     established: "2019",
     tagline: "The Lefay method, carried to altitude.",
     cardline: "Alpine wellness where the pistes meet the SPA Method.",
-    categories: ["sleep", "detox", "executive-reset", "preventive-health", "longevity"],
+    categories: ["sleep", "detox", "executive-reset", "preventive-health", "longevity", "traditional-healing"],
     hero: {
       tone: "lefay-dolomiti",
       alt: "Contemporary alpine resort in larch and stone beneath the Brenta Dolomites",
@@ -588,7 +588,7 @@ export const signatureResorts: Resort[] = [
     established: "2002",
     tagline: "A medical wellness farm beneath Mount Malarayat.",
     cardline: "Functional medicine and plant-based cuisine on a Philippine estate.",
-    categories: ["medical-wellness", "detox", "nutrition", "preventive-health", "longevity"],
+    categories: ["medical-wellness", "detox", "nutrition", "preventive-health", "longevity", "weight-optimisation", "fitness-performance"],
     hero: {
       tone: "the-farm-san-benito",
       alt: "Tropical estate of coconut palms and pavilions beneath Mount Malarayat",
